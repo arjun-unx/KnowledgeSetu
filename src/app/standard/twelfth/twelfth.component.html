@@ -1,0 +1,28 @@
+<header>
+    <nav class="navbar fixed-top navbar-dark bg-col shadow">
+        <div class="container">
+            <a class="navbar-brand" href="#"><img src="../../assets/new-logo.jpeg" class="navlogo">&nbsp;
+                <span class="colortext">Knowledge </span><span class="plaintext">Setu</span>
+            </a>
+        </div>
+    </nav>
+  </header>
+  <div class="simple">
+  <p style="margin-left:-480px; color: rgb(48, 148, 148);font-size: xx-large;font-weight: bold;">Free</p><p style="margin-top:-30px;margin-left: 70px;font-size: xx-large;font-weight: bold;">Lectures, Chapters and E-Books</p>
+  </div>
+  <p style="margin-top:40px;margin-left:60px;color: rgb(48, 148, 148);font-size: xx-large;font-weight: bold;">Chapterwise</p><p style="margin-top:-33px;margin-left: 250px;font-size: xx-large;font-weight: bold;">Lectures</p>
+        <div class="roo" *ngFor="let model of List" style="display: inline-block;"> 
+          <div class="lecture">
+            <video controls class="video">
+              <source src={{model.video}} type="video/mp4">
+            </video>
+            <h1>{{model.sub}}</h1>
+          </div>
+        </div>
+        <p style="margin-top:40px;margin-left:60px;color: rgb(48, 148, 148);font-size: xx-large;font-weight: bold;">Subjectwise</p><p style="margin-top:-33px;margin-left: 250px;font-size: xx-large;font-weight: bold;">Chapters and E-Books</p>
+          <div class="content" *ngFor="let model of List; let i=index">
+            <b scope="row" style="display: inline-block; padding-left: 10px;">{{i+1}})</b>
+            <b style="padding-left: 10px;">{{model.sub}}&nbsp;&nbsp;-</b>
+            <a style="padding-left: 10px;" href="{{model.document}}">Chapter {{i+1}}</a> 
+          </div>
+  <app-teacher-footer></app-teacher-footer>

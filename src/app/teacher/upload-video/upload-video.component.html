@@ -1,0 +1,155 @@
+<!--header nav section-->
+<app-teacher-header></app-teacher-header>
+<!--header nav section ends-->
+<section class="bg-margin">
+    <div class="container">
+        <div class=" d-flex  cordform justify-content-center">
+            <div class="col-sm-12 col-xd-12 col-md-12">
+                <div class="card shadow ">
+
+                    <div class="card-body cord">
+                        <form class="fom" #uploadvideo="ngForm">
+                            <h1>Upload your Lectures</h1>
+
+                            <label class="label">Class</label>
+                            <mat-form-field appearance="fill" style="width: 100%;">
+                                <mat-label>Select Class</mat-label>
+                                <mat-select name="class" [(ngModel)]="model.class" #class='ngModel' required>
+                                    <mat-option value="First">I</mat-option>
+                                    <mat-option value="Second">II</mat-option>
+                                    <mat-option value="Third">III</mat-option>
+                                    <mat-option value="Fouth">IV</mat-option>
+                                    <mat-option value="Fifth">V</mat-option>
+                                    <mat-option value="Sixth">VI</mat-option>
+                                    <mat-option value="Seventh">VII</mat-option>
+                                    <mat-option value="Eighth">VIII</mat-option>
+                                    <mat-option value="Ninth">IX</mat-option>
+                                    <mat-option value="Tenth">X</mat-option>
+                                    <mat-option value="Eleventh">XI</mat-option>
+                                    <mat-option value="Twelfth">XII</mat-option>
+
+                                </mat-select>
+                            </mat-form-field>
+                            <label for="Subjectname" class="label">Select Subject</label>
+                            <input type="text" class="form-control" name="Subject" id="Subject" class="inp"
+                                [(ngModel)]="model.Subjectname" required />
+
+                            <div class="row">
+                                <div class="col-sm-12 col-md-6 col-xl-6">
+                                    <label for="Fees" class="label">Fees</label>
+                                    <input type="text" class="form-control" name="Fees" id="Fees" class="inp"
+                                        [(ngModel)]="uploadDetails.Fees" required />
+                                </div>
+                                <div class="col-sm-12 col-md-6 col-xl-6">
+                                    <label class="label">Package</label>
+                                    <mat-form-field appearance="fill" style="width: 100%;">
+                                        <mat-label>Select Package</mat-label>
+                                        <mat-select name="package" [(ngModel)]="uploadDetails.package" required>
+                                            <mat-option value="monthly">Monthly</mat-option>
+
+                                        </mat-select>
+                                    </mat-form-field>
+                                </div>
+                            </div>
+
+
+
+                            <!--This the document upload button section-->
+                            <hr class="mb-4">
+                            <div class="row">
+                                <div class="col-sm-6 col-md-6 col-xd-6">
+                                    <label for="vedio" class="label">Video
+
+
+                                        Upload</label>
+                                    <input type="file" id="vedio" name="vedio" accept=".mp4"
+                                        (change)="handlevideofile($event)" />
+                                    <div class="progress" *ngIf="uploadProgress | async as progress">
+                                        <div class="progress-bar bg-success progress-bar-striped progress-bar-animated"
+                                            [ngStyle]="{ 'width': progress + '%' }"></div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-md-6 col-xd-6">
+                                    <label for="Document" class="label">Document Upload(zip/pdf)</label>
+                                    <input type="file" name="document" (change)="handledocumentfile($event)"
+                                        id="Document" accept=".zip,.pdf" />
+                                    <div class="progress" *ngIf="documentUploadProgress | async as docprogress">
+                                        <div class="progress-bar bg-success progress-bar-striped progress-bar-animated"
+                                            [ngStyle]="{ 'width': docprogress + '%' }"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <h3 style="color: red;">{{this.alert}}</h3>
+                            <h3 style="color: green;" *ngIf="videoNumber == 100 && docNumber== 100"><b>Uploaded
+                                    Successfully</b></h3>
+                            <hr class="mb-4">
+                            <div class="bton-group">
+                                <button class="btn bton bt-back"
+                                    [routerLink]="['/teacher/teacherDashboard']">Back</button>
+                                <button class="btn bton bt-save" (click)="onSubmit()">
+                                    <img class="img-fluid" src="../../assets/publish-white-18dp.svg" width="20"
+                                        height="20">Save
+                                </button>
+                            </div>
+
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--footer section-->
+<app-teacher-footer></app-teacher-footer>
+<!--end of footer section-->
+
+
+<!-- modal for create class -->
+<!-- <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title" id="staticBackdropLabel">Create Class</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <form action="#" class="fom" #uploadvideo="ngForm">
+                <label  class="label">Class</label>
+                <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" name="Class"  required>
+                    <mat-option selected>Select Class</mat-option>
+                      <mat-option  value="First">I</mat-option>
+                      <mat-option  value="Second">II</mat-option>
+                      <mat-option  value="Third">III</mat-option>
+                      <mat-option  value="Fouth">IV</mat-option>
+                      <mat-option  value="Fifth">V</mat-option>
+                      <mat-option  value="Sixth">VI</mat-option>
+                      <mat-option  value="Seventh">VII</mat-option>
+                      <mat-option  value="Eighth">VIII</mat-option>
+                      <mat-option  value="Nineth">IX</mat-option>
+                      <mat-option  value="Tenth">X</mat-option>
+                      <mat-option  value="Eleventh">XI</mat-option>
+                      <mat-option  value="Twelfth">XII</mat-option>
+                  </select>
+                
+                <label for="Subjectname" class="label">Enter Subject Name</label>
+                <input type="text" class="form-control" placeholder="Subject" name="Subject" id="Subjectname" class="inp"  required/>
+
+                <label for="Fees" class="label">Fees</label>
+                <input type="text" class="form-control" placeholder="Enter Fees" name="Fees" id="Fees" class="inp" required/>
+                    
+
+                This the document upload button section-->
+<!-- <hr class="mb-4">
+                <h3 style="color: red;">{{this.alert}}</h3>
+                <h3 style="color: green;">{{this.message}}</h3>
+                
+            </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn bton bt-back" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn bton bt-save" >Create</button>
+        </div>
+      </div>
+    </div>
+  </div> -->

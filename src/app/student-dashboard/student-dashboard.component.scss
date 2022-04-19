@@ -1,0 +1,224 @@
+/**************************header css strt***********************************/
+.bg-margin{
+   margin-top: 50px;
+}
+/***********************css for sidebar***********************************
+#wrapper {
+    overflow-x: hidden;
+ }
+#sidebar-wrapper {
+  z-index: 1000;
+  min-height: 100vh;
+  margin-left: -15rem;
+  -webkit-transition: margin .25s ease-out;
+  -moz-transition: margin .25s ease-out;
+  -o-transition: margin .25s ease-out;
+  transition: margin .25s ease-out;
+}
+
+#sidebar-wrapper .sidebar-heading {
+  padding: 0.875rem 1.25rem;
+  font-size: 1.2rem;
+}
+
+#sidebar-wrapper .list-group {
+  width: 15rem;
+}
+
+
+#page-content-wrapper {
+  min-width: 100vw;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+  margin-left: 0;
+}
+.lefttoggle{
+  border: 2px solid #239463;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.sidetoggle{
+  border-radius: 50%;
+  background-color: #239463;
+  width: fit-content;
+  height: 50px;
+  text-align: center;
+  justify-content: center;
+}
+.headtext{
+  padding-top: 30px;
+  color: #239463;
+  font-weight: bolder;
+  font-size: 30px;
+}
+.sn-social{
+  text-align: center;
+}
+.sn-social.head{
+  font-size: 20px;
+  font-weight: bold;
+  color: #000000;
+}
+.sidenav-link{
+  padding: 10px 20px;
+  display: block;
+  font-size: 15px;
+  text-decoration: none;
+  color: #000000;
+}
+.sidenav-link:hover{
+  color: rgb(35, 148, 99)!important;
+  background: linear-gradient(90deg,rgba(35,148,99,.1),rgba(35,148,99,.0875) 50%,transparent);
+  border-left:4px solid #239463;
+}
+.active{
+  color: rgb(35, 148, 99)!important;
+  background: linear-gradient(90deg,rgba(35,148,99,.1),rgba(35,148,99,.0875) 50%,transparent);
+  border-left:4px solid #239463;
+}
+.card{
+  border: none;
+  border-radius: 10px;
+  background-color: #FFC300;
+  margin: 20px 10px 20px 10px;
+}
+.sidecardimg h1{
+   color: #fff;
+   float: left;
+   font-size: 20px;
+}
+.image{
+  background-color: rgba($color: #ffffff, $alpha: .3);
+  padding: 10px 10px;
+  border-radius: 20%;
+  box-shadow: 4px;
+  width: fit-content;
+  height: fit-content;
+  float: right;
+}
+.btt{
+  border: none;
+  color: white;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  width: 100%;
+  text-align: center;
+  border-radius: 8px;
+  background-color: rgba($color: #ffffff, $alpha: .3);
+  cursor: pointer;
+}
+.btt:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.notify{
+  background-color: red;
+  border-radius: 50px;
+  font-size: 10px;
+  padding: 2px 5px;
+  color: white;
+  float: right;
+}
+.img{
+  width: 20px;
+  height: 20px;
+  margin-right: 20px;
+}
+.mb-2{
+  margin: 15px 15px;
+}
+.flex1{
+  margin-right: 50px;
+}
+.bg-margin{
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+*************************************css for modal add teacher*******************************
+.modal-title{
+  float: left;
+  margin-bottom: -5px;
+}
+.modal-title::before{
+  content:"";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background-color: #239463;
+  position: absolute;
+}
+.label{
+  font-size: 18px;
+}
+.required::before {
+  content: "*";
+  color: red;
+  margin-right: 3px;
+}
+.modalinp{
+  background-color: #eee;
+  border: none;
+  border-radius: 5px;
+  padding: 12px 15px;
+  margin: 8px 0;
+  width: 100%;
+  border: 2px solid #000000;
+}
+.modalbtn{
+  float: right;
+}
+.modalbtn .btn{
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 12px;
+  letter-spacing: 1px;
+  padding: 8px 8px;
+  cursor: pointer;
+}
+.btn1{
+  border: 2px solid #239463;
+  background-color: #239463;
+  color: white;
+}
+.btnclose{
+  margin-right: 8px;
+  border: 2px solid #239463;
+  color: #239463;
+}
+*************************footer******************************
+
+footer.footer {
+  padding: 1rem .875rem;
+  direction: ltr;
+  background: #fff;
+}
+
+******************************media query*************************************
+@media (min-width: 768px) {
+    #sidebar-wrapper {
+      margin-left: 0;
+    }
+  
+    #page-content-wrapper {
+      min-width: 0;
+      width: 100%;
+    }
+  
+    #wrapper.toggled #sidebar-wrapper {
+      margin-left: -15rem;
+    }
+  }
+@media (max-width: 990px){
+   
+}
+@media (max-width: 858px){
+    
+}
+@media (max-width: 550px){
+ .flex1 a{
+   display: none;
+ }
+}*/

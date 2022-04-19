@@ -1,0 +1,113 @@
+<app-teacher-header></app-teacher-header>
+<!-- <div id="wave"></div> -->
+<section class="bg-margin" >
+  <div class="container">
+    <section class="bg-margin">
+      <div class="contain d-flex justify-content-center">
+        <h1>Hi, {{model.fullName}}</h1>
+        <!--{{model[0].Teacher_Name}} -->
+      </div>
+    </section>
+    <section class="bg-margin">
+      <div class="row">
+        <div class="col-sm-4 col-md-4 col-xd-4 margin">
+          <div class="card shadow" [routerLink]="['/teacher/Profile']">
+            <div class="card-body">
+              <div class="icons">
+                <img src="../../../assets/user.png">
+                <h2 class="text">Profile</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4 col-md-4 col-xd-4 margin">
+          <div class="card shadow" [routerLink]="['/teacher/liveClass']">
+            <div class="card-body">
+              <div class="icons">
+                <img src="../../../assets/live.png">
+                <h2 class="text">Live link Upload</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4 col-md-4 col-xd-4 margin">
+          <div class="card shadow" [routerLink]="['/teacher/classshow']">
+            <div class="card-body">
+              <div class="icons">
+                <img src="../../../assets/liveclasses.png" height="61">
+                <h2 class="text">Live Classes</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-4 col-md-4 col-xd-4 margin">
+          <div class="card shadow" [routerLink]="['/teacher/uploadVideo']">
+            <div class="card-body">
+              <div class="icons">
+                <img src="../../../assets/upload.png">
+                <h2 class="text">Upload Video</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4 col-md-4 col-xd-4 margin">
+          <div class="card shadow" [routerLink]="['/teacher/showVideo']">
+            <div class="card-body">
+              <div class="icons">
+                <img src="../../../assets/multimedia.png">
+                <h2 class="text">Show Videos</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4 col-md-4 col-xd-4 margin">
+          <div class="card shadow" [routerLink]="['/teacher/studentSubscribeList']">
+            <div class="card-body">
+              <div class="icons">
+                <img src="../../../assets/student.png">
+                <h2 class="text">Students</h2>
+              </div>
+            </div>
+          </div>
+        </div>  
+      </div>
+      <div class="row">
+        <!-- <div class="col-sm-4 col-md-4 col-xd-4 margin">
+          <div class="card shadow" [routerLink]="['/teacher/payment']">
+            <div class="card-body">
+              <div class="icons">
+                <img src="../../../assets/debit-card.png">
+                <h2 class="text">Payments</h2>
+              </div>
+            </div>
+          </div>
+        </div> -->
+        <div class="col-sm-4 col-md-4 col-xd-4 margin">
+          <div class="card shadow" [routerLink]="['/teacher/teacher-setting']">
+            <div class="card-body">
+              <div class="icons">
+                <img src="../../../assets/settings.png">
+                <h2 class="text">Settings</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4 col-md-4 col-xd-4 margin">
+          <div class="card shadow" [routerLink]="['/help']">
+            <div class="card-body">
+              <div class="icons">
+                <img src="../../../assets/help.png">
+                <h2 class="text">Help</h2>
+              </div>
+            </div>
+          </div>
+        </div> 
+      </div>
+    </section>
+  </div>
+</section>
+  
+  <!--footer section-->
+  <app-teacher-footer></app-teacher-footer>

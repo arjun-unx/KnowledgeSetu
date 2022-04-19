@@ -1,0 +1,128 @@
+/*import */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
+/*this file contais the css code of add new admin html file   */
+.bg-marign{
+    margin-top: 100px;
+}
+.card{
+    border: none;
+    padding: 20px 20px;
+    width: 100%;
+}
+/*css code of main card section*/
+.main-card{
+	background-color: #edf6f9;
+}
+/* css code of head text*****/
+.head-text{
+	text-transform: uppercase;
+	font-family: 'Poppins', sans-serif;
+	color: #0795b5;
+	letter-spacing: 0.6px;
+}
+
+/*css code of details card */
+.dt-section .details-card{
+	border-radius: 20px;
+}
+/***************************form css start*************************************************/
+.cordform{
+	transform: translate(0px,-100px);
+}
+.card{
+    border: none;
+	border-radius: 0%;
+}
+.cord{
+	margin-left: 20px;
+	margin-right: 20px;
+}
+.center{
+	display: flex;
+	justify-content: center;
+}
+.text{
+	color: grey;
+}
+.cl{
+	margin-top: 30px;
+}
+.cll{
+	margin-top: 40px;
+}
+.right{
+	padding-left: 10px;
+}
+.bton {
+	border-radius: 5px;
+	font-size: 12px;
+	padding: 5px 25px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	margin: 8px;
+}
+.btncol{
+	background-color: rgba($color: red, $alpha: 0.5);
+	border: 2px solid red;
+	font-family: 'Poppins', sans-serif;
+	color: black;
+}
+.btncol1{
+	background-color: #0795b5;
+	font-family: 'Poppins', sans-serif;
+	color: #FFFFFF;
+}
+/********************************this is the css section for files***********************/
+.bton1 {
+	border-radius: 5px;
+	border: 1px solid #239463;
+	background-color: #239463;
+	color: #FFFFFF;
+	font-size: 15px;
+	font-weight: bold;
+	padding: 10px 10px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+/*********************************Media query************************************/
+@media (max-width: 1024px){
+    .bton {
+		border-radius: 5px;
+		font-size: 12px;
+		font-weight: bold;
+		padding: 5px 10px;
+		letter-spacing: 1px;
+		text-transform: uppercase;
+		margin: 5px;
+	}
+}
+@media (max-width: 858px){
+	.bton {
+		border-radius: 5px;
+		font-size: 12px;
+		font-weight: bold;
+		padding: 5px 10px;
+		letter-spacing: 1px;
+		text-transform: uppercase;
+		margin: 8px;
+	}
+}
+@media (max-width: 574px){
+	.bton {
+		border-radius: 5px;
+		font-size: 12px;
+		font-weight: bold;
+		padding: 5px 25px;
+		letter-spacing: 1px;
+		text-transform: uppercase;
+		margin: 8px;
+	}
+	.center{
+		display: flex;
+		justify-content: left;
+	}
+	.right{
+		padding-left: 0px;
+	}
+}

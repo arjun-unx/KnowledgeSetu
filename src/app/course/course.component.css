@@ -1,0 +1,49 @@
+/*css for nav section*/
+.navbar-brand {
+  margin-top: 20px;
+}
+
+/*
+.wrapper{
+    max-height: 120px;
+    border: 2px solid #0795b5;
+    display: flex;
+    overflow-x: scroll;
+}
+.wrapper::-webkit-scrollbar{
+    width: 0;
+}
+.navs-link{
+    min-width: 110px;
+    height: 110px;
+    line-height: 110px;
+    text-align: center;
+    margin-right: 50px;
+}
+*/
+.nav-tabs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.nav-link {
+  color: #000;
+  font-size: 20px;
+}
+
+.nav-item .nav-link.active {
+  color: #0795b5;
+}
+
+.nav-item .nav-link:hover {
+  color: #0795b5;
+}
+
+/*router section css*/
+.bg-margin {
+  margin-top: 30px;
+}
+/*# sourceMappingURL=course.component.css.map */

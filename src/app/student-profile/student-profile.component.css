@@ -1,0 +1,158 @@
+.head {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  color: #0795b5;
+  font-weight: bold;
+  font-size: xx-large;
+  letter-spacing: 1px;
+}
+
+.biopara {
+  text-align: center;
+  padding: 15px 15px;
+}
+
+.subhead {
+  text-align: center;
+}
+
+.subpara {
+  text-align: center;
+  margin-top: -10px;
+}
+
+.card {
+  border: none;
+  border-radius: 0%;
+}
+
+.header {
+  padding: 10px 10px;
+  text-transform: uppercase;
+}
+
+.formpoint {
+  font-size: 12px;
+  text-transform: uppercase;
+  color: grey;
+}
+
+.label {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.labeltext {
+  font-size: 1.5em;
+  margin-right: 10px;
+}
+
+.fom {
+  background-color: #FFFFFF;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 10px 50px;
+  height: 100%;
+}
+
+.form-select:focus {
+  outline: none;
+}
+
+.required::before {
+  content: "*";
+  color: red;
+  margin-right: 3px;
+}
+
+.inp {
+  background-color: #eee;
+  border: none;
+  padding: 12px 15px;
+  margin: 8px 0px;
+  width: 100%;
+}
+
+.bton {
+  border-radius: 5px;
+  background-color: #0795b5;
+  color: #FFFFFF;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 8px 15px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.bton:focus {
+  position: relative;
+  outline: none;
+}
+
+/*********************************Media query************************************/
+@media (max-width: 858px) {
+  .head {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    color: #0795b5;
+    font-weight: bold;
+    font-size: 30px;
+    letter-spacing: 1px;
+  }
+  .subhead {
+    text-align: center;
+  }
+  .subpara {
+    text-align: center;
+    margin-top: -10px;
+  }
+}
+
+@media (max-width: 574px) {
+  .head {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    color: #0795b5;
+    font-weight: bold;
+    font-size: xx-large;
+    letter-spacing: 1px;
+  }
+  .sub {
+    margin-right: 30px;
+  }
+  .sub1 {
+    margin-left: 30px;
+  }
+  .subhead {
+    text-align: center;
+  }
+  .subpara {
+    text-align: center;
+    margin-top: -10px;
+  }
+  .fom {
+    background-color: #FFFFFF;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 10px 0px;
+    height: 100%;
+  }
+  .formsection {
+    margin-top: 30px;
+  }
+}
+/*# sourceMappingURL=student-profile.component.css.map */

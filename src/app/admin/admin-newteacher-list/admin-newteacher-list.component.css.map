@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,gGAAgG;AAChG,AAAA,UAAU,CAAA;EACN,OAAO,EAAE,IAAI;EACb,eAAe,EAAE,IAAI;EACrB,KAAK,EAAE,OAAO;EACd,aAAa,EAAE,IAAI;EACnB,MAAM,EAAE,iBAAiB;EACzB,OAAO,EAAE,QAAQ;EACjB,cAAc,EAAE,GAAG;EACnB,gBAAgB,EAAe,sBAAO;CACzC",
+    "sources": [
+        "admin-newteacher-list.component.scss"
+    ],
+    "names": [],
+    "file": "admin-newteacher-list.component.css"
+}

@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "student-register.component.scss"
+    ],
+    "names": [],
+    "file": "student-register.component.css"
+}

@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;800&display=swap');
+/**************************************
+    404 page
+*****************************************/
+.pagenotfound{
+    padding:40px 0; 
+    background:#fff; 
+}
+.pagenotfound  img{ 
+    margin-top: 50px;
+    width: auto;
+    height: 400px;
+}
+
+.four_zero_four_bg h1{
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    font-size:80px;
+}
+ 
+.contant_box_404 .h2, .contant_box_404 p{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+	font-size:20px;
+}
+a{
+    text-decoration: none;
+}
+			 
+.link_404{			 
+	color: #fff!important;
+    padding: 10px 20px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    background: #0795b5;
+    margin: 20px 0;
+    display: inline-block;
+}
+	
+.contant_box_404{ 
+    margin-top:50px;
+}

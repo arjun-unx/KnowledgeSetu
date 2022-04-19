@@ -1,0 +1,81 @@
+<section class="bg-margin">
+    <div class="container">
+        <div class=" col-sm-12 col-md-12 col-xd-12">
+            <div class="card main shadow ">
+                <div class="card-body">
+                    <div class="card shadow">
+                        <div class="card-body">
+                            <div class="mt-2">
+                                <h1 class="title form-control">Teacher's Payment</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-sm-12 col-md-6 col-xl-4">
+                            <div class="card shadow">
+                                <div class="card-body">
+                                    <div class="mt-2">
+                                        <h2 class="title form-control" id="help">Barcode for Payment</h2>
+                                    </div>
+                                    <div class="mt-2" *ngIf="model.URL.length != 0">
+                                        <img class="title form-control img-fluid barcode" src={{model.URL}}>
+                                    </div>
+                                    <div class="mt-2" *ngIf="model.URL.length == 0">
+                                        <img class="title form-control img-fluid barcode" src="../../../assets/debit-card.png">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-6 col-xl-8 sm-margin">
+                            <div class="card shadow">
+                                <div class="card-body">
+                                    <div class="mt-2">
+                                        <h2 class="title form-control" id="help">Upload Barcode</h2>
+                                    </div>
+                                    <div class="mt-2 form-control">
+                                        <form class="fom" #form=ngForm (ngSubmit)="onUpload(form)">
+                                            <div class="row">
+                                                <div class="col-sm-12 col-md-6 col-xl-6">
+                                                    <label for="name" class="label">Name<span class="required"></span></label>
+                                                    <input type="text" id="name" class="inp" 
+                                                    [(ngModel)]="model.name" name="name" #name="ngModel"  required/>
+                                                </div>
+                                                <div class="col-sm-12 col-md-6 col-xl-6">
+                                                    <label for="number" class="label">Number<span class="required"></span></label>
+                                                    <input type="tel" id="number" class="inp" 
+                                                    [(ngModel)]="model.number" name="number" #number="ngModel" maxlength="10" required/>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-sm-12 col-md-6 col-xl-6">
+                                                    <label for="email" class="label">Email<span class="required"></span></label>
+                                                    <input type="email" id="name" class="inp" 
+                                                    [(ngModel)]="model.email" name="email" #email="ngModel"  required/>
+                                                </div>
+                                                <div class="col-sm-12 col-md-6 col-xl-6">
+                                                    <label for="barcode" class="label">Barcode<span class="required"></span></label>
+                                                    <input type="file" name="barcode" id="barcode"
+                                                    (change)="handlebarcodefile($event)" accept=".jpg,.jpeg" required/>
+                                                    <div class="progress" *ngIf="documentUploadProgress | async as docprogress">
+                                                        <div class="progress-bar bg-success progress-bar-striped progress-bar-animated"  [ngStyle]="{ 'width': docprogress + '%' }"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <h2 style="color: darkred;">{{this.alert}}</h2>
+                                            <h3 style="color: green;" *ngIf="docNumber== 100"><b>Uploaded Successfully</b></h3>
+                                            <div class="bton-group">
+                                                <button class="btn bton bt-save" type="submit">
+                                                    Upload
+                                                </button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

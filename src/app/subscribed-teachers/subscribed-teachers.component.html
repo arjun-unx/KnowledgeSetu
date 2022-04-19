@@ -1,0 +1,36 @@
+<div class="container">
+    <div class="row">
+      <div class="card" *ngFor="let data of SubscribeList">
+      <ng-container>
+        <div class="row">
+          <div class="col-sm-3 col-md-3 col-xl-3">
+            <video controls class="video">
+              <source src={{data.VideoURL}} type="video/mp4">
+            </video>
+          </div>
+          <div class="col-sm-7 col-md-7 col-xl-7 py-3">
+            <p>
+              <i class="fas fa-align-justify"></i>
+              Running Course
+            </p>
+            <h1>{{data.Subject}}</h1>
+            <p>{{data.Name}}</p>
+            
+          </div>
+          <!-- <div class="col-sm-2 col-md-2 col-xl-2">
+            <a class="dropdown-toggle" href="#" id="navbarDropdown1" type="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              More
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown1">
+              <li><a class="dropdown-item" href="#">Add to collection</a></li>
+              <li><a class="dropdown-item" href="#">Download Document</a></li>
+              <li><a class="dropdown-item" href="#">Remove</a></li>
+            </ul>
+          </div> -->
+        </div>
+        </ng-container>
+      </div>
+      <hr class="mb-2">
+    </div>
+  </div>

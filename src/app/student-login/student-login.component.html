@@ -1,0 +1,168 @@
+<app-header></app-header>
+<!--header section end-->
+<!--login section starts-->
+<section class="bg-margin">
+	<div class="container">
+		<div class="card showcard shadow">
+			<div class="display_off" id="loading">
+				<div class="card loader">
+					<div></div>
+				</div>
+			</div>
+			<div class="card-body">
+				<div class="row">
+					<div class="col-sm-8 col-md-8 col-xd-8">
+						<div>
+							<a class="card-head1">
+								<span class="colortext">Knowledge </span><span class="plaintext">Setu</span>
+							</a>
+						</div>
+						<div class="text">
+							<p class="para">#1 India's Best Teaching and Learning Platform Which Provide live
+								Interaction With Educator
+								As well as Recorded Lectures
+							</p>
+						</div>
+						<div class="image">
+							<img src="../../assets/welcomeloginimage.svg" class="img-fluid loginimg">
+						</div>
+
+					</div>
+					<div class="col-sm-4 col-md-4 col-xd-4">
+						<div class="card formcard shadow">
+							<div class="card-body">
+								<ul class="nav mb-3" id="pills-tab" role="tablist">
+									<li class="nav-item" role="presentation">
+										<a class="tabs shadow act" id="pills-home-tab" data-bs-toggle="pill"
+											data-bs-target="#pills-signin" type="button" role="tab"
+											aria-controls="pills-signin" aria-selected="true">Sign In</a>
+									</li>
+									<li class="nav-item" role="presentation">
+										<a class="tabs shadow" id="pills-profile-tab" data-bs-toggle="pill"
+											data-bs-target="#pills-profile" type="button" role="tab"
+											aria-controls="pills-profile" aria-selected="false">Sign Up</a>
+									</li>
+								</ul>
+								<div class="tab-content" id="pills-tabContent">
+									<div class="tab-pane fade show active" id="pills-signin" role="tabpanel"
+										aria-labelledby="pills-home-tab">
+										<form class="was-validated" enctype="multipart/form-data" #loginForm="ngForm"
+											(ngSubmit)=onSubmit($event)>
+											<h1>Sign in</h1>
+											<input type="email" class="form-control" placeholder="Email" name="email"
+												[(ngModel)]='loginDetail.email' #email='ngModel' required />
+											<input type="password" class="form-control" placeholder="Password"
+												name="password" [(ngModel)]='loginDetail.password' #password='ngModel'
+												required />
+											<span style="color: red;">{{alert}}</span>
+											<button class="bton shadow" (click)="onSubmit('SignIn')"
+												[disabled]=!loginForm.form.valid type="button">Sign In</button>
+											<a href="#" class="link" data-toggle="modal" data-target="#sem-login"
+												[routerLink]="['/forgot']">Forgot your
+												password?</a>
+										</form>
+									</div>
+									<div class="tab-pane fade" id="pills-profile" role="tabpanel"
+										aria-labelledby="pills-profile-tab">
+										<form class="was-validated" enctype="multipart/form-data" #registerForm="ngForm"
+											(ngSubmit)=onSubmit($event)>
+											<h1>Create Account</h1>
+											<input type="text" placeholder="FullName" class="form-control"
+												name="fullName" [(ngModel)]="model.fullName" #fullName="ngModel"
+												required>
+											<input type="text" placeholder="Email" class="form-control" name="email"
+												[(ngModel)]="model.email" #email='ngModel' required>
+											<!-- <input type="text" placeholder="Teacher Id" class="form-control"  name="teacherid" [(ngModel)]="model.teacherid" #teacherid='ngModel'> -->
+											<input type="tel" placeholder="Phone Number" class="form-control"
+												name="phoneNumber" pattern="[0-9]{10}" [(ngModel)]="model.phoneNumber"
+												#phoneNumber='ngModel' required maxlength="10">
+											<input type="password" placeholder="Password" class="form-control"
+												name="password" [(ngModel)]="model.password" #password='ngModel'
+												required>
+											<mat-form-field appearance="fill" style="width: 100%;">
+												<mat-label>Select Class</mat-label>
+												<mat-select name="Class" [(ngModel)]="model.Class" #Class='ngModel'
+													required>
+													<mat-option value="First" (click)="toogleTag(true)">I</mat-option>
+													<mat-option value="Second" (click)="toogleTag(true)">II</mat-option>
+													<mat-option value="Third" (click)="toogleTag(true)">III</mat-option>
+													<mat-option value="Fouth" (click)="toogleTag(true)">IV</mat-option>
+													<mat-option value="Fifth" (click)="toogleTag(true)">V</mat-option>
+													<mat-option value="Sixth" (click)="toogleTag(true)">VI</mat-option>
+													<mat-option value="Seventh" (click)="toogleTag(true)">VII
+													</mat-option>
+													<mat-option value="Eighth" (click)="toogleTag(true)">VIII
+													</mat-option>
+													<mat-option value="Ninth" (click)="toogleTag(false)">IX</mat-option>
+													<mat-option value="Tenth" (click)="toogleTag(false)">X</mat-option>
+													<mat-option value="Eleventh" (click)="toogleTag(false)">XI
+													</mat-option>
+													<mat-option value="Twelfth" (click)="toogleTag(false)">XII
+													</mat-option>
+												</mat-select>
+											</mat-form-field>
+											<mat-form-field *ngIf="showMe" appearance="fill" style="width: 100%;">
+												<mat-label>Select Special Class</mat-label>
+												<mat-select name="spclClass" [(ngModel)]="model.spclClass"
+													#spclClass='ngModel' required>
+													<mat-option value="Yoga">Yoga</mat-option>
+													<mat-option value="Martial Arts">Martial Arts</mat-option>
+													<mat-option value="Music">Music</mat-option>
+													<mat-option value="Zumba">Zumba</mat-option>
+													<mat-option value="Art & Craft">Art & Craft</mat-option>
+													<mat-option value="Cooking">Cooking</mat-option>
+													<mat-option value="German">German</mat-option>
+													<mat-option value="Drama">Drama</mat-option>
+													<mat-option value="Gymnastics">Gymnastics</mat-option>
+													<mat-option value="Chocolate Making">Chocolate Making</mat-option>
+													<mat-option value="Gardening">Gardening</mat-option>
+													<mat-option value="Gaming">Gaming</mat-option>
+													<mat-option value="Fashion">Fashion</mat-option>
+													<mat-option value="Baking">Baking</mat-option>
+													<mat-option value="Dance">Dance</mat-option>
+													<mat-option value="Abacus">Abacus</mat-option>
+													<mat-option value="Cake Decorating">Cake Decorating</mat-option>
+													<mat-option value="Fitness">Fitness</mat-option>
+
+												</mat-select>
+											</mat-form-field>
+											<div class="form-group">
+												<mat-form-field appearance="fill" style="width: 100%;">
+													<mat-label>State</mat-label>
+													<mat-select name="state" [(ngModel)]="model.state" #state='ngModel'
+														required>
+														<mat-option *ngFor="let state of States"
+															(click)='getCities(state.isoCode)' [value]="state.name">
+
+															{{state.name}}
+														</mat-option>
+													</mat-select>
+												</mat-form-field>
+											</div>
+											<div class="form-group">
+												<mat-form-field appearance="fill" style="width: 100%;">
+													<mat-label>City</mat-label>
+													<mat-select name="city" [(ngModel)]="model.city" #city='ngModel'
+														required>
+														<mat-option *ngFor="let city of Cities" [value]='city.name'>
+															{{city.name}}
+														</mat-option>
+													</mat-select>
+												</mat-form-field>
+											</div>
+											<span style="color: darkred;">{{alert}}</span>
+											<span style="color: green;">{{message}}</span>
+											<button class="bton shadow" type="submit" (click)="onSubmit('SignUp')"
+												[disabled]=!registerForm.form.valid>Sign Up</button>
+										</form>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<app-teacher-footer></app-teacher-footer>

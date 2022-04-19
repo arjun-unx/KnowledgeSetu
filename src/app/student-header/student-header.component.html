@@ -1,0 +1,105 @@
+<nav class="navbar navbar-expand-lg navbar-light shadow">
+  <div class="container">
+    <a class="navbar-brand">
+      <img src="../../assets/new-logo.jpeg" width="60" height="60">
+      <span class="colortext">Knowledge </span><span>Setu</span>
+    </a>
+      
+    <span class="navbar-text">
+      <li class="nav-item">
+        <i class="fas fa-search img search"></i>
+        <a class=" nav-link search"  [routerLink]="['/searchTeacher']" routerLinkActive="active" >
+          Search
+        </a>
+      </li>
+      <li class="nav-item ">
+        <img src="../../assets/home-alt2.svg" width="20" height="20" class="img home">
+        <a [routerLink]="['/main-pannel']" routerLinkActive="active" class="nav-link home">Home</a>
+      </li>
+      <li class="nav-item">
+        <img src="../../assets/user-plus.svg" width="20" height="20" class="img addteacher">
+        <a data-bs-toggle="modal" data-bs-target="#staticBackdrop" routerLinkActive="active"
+          class="nav-link addteacher">Add
+          Teacher</a>
+      </li>
+      <li class="nav-item">
+        <img src="../../assets/book-open.svg" width="20" height="20" class="img mylearning">
+        <a class="nav-link mylearning" [routerLink]="['/student-dashboard/course']" routerLinkActive="active">My
+          Learning</a>
+      </li>
+      <li class="nav-item dropdown">
+        <img src="../../assets/user.svg" width="20" height="20" class="img">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown"
+          aria-expanded="false">
+          Profile
+        </a>
+        <ul class="dropdown-menu shadow" aria-labelledby="navbarDropdownMenuLink">
+          <h1 class="dropdown-text">{{model.StudentName}}</h1>
+          <li>
+            <hr class="dropdown-divider">
+          </li>
+          <li><a class="dropdown-item mb-2" [routerLink]="['/main-pannel']">
+            Home
+            <img class="dropicon" src="../../assets/home-alt2.svg">
+          </a></li>
+          <li><a class="dropdown-item mb-2" [routerLink]="['/student-dashboard']">
+              Profile
+              <img class="dropicon" src="../../assets/user.svg">
+            </a></li>
+          <li><a class="dropdown-item mb-2" [routerLink]="['/student-dashboard/course']">My Learning
+              <img src="../../assets/book-open.svg" class="dropicon">
+            </a></li>
+          <li><a class="dropdown-item mb-2" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Add Teacher
+              <img src="../../assets/user-plus.svg" class="dropicon">
+            </a></li>
+          <li>
+            <hr class="dropdown-divider">
+          </li>
+          <li><a class="dropdown-item mb-2" [routerLink]="['/settings']">Setting
+              <img src="../../assets/settings.svg" class="dropicon">
+            </a></li>
+          <li><a class="dropdown-item mb-2" [routerLink]="['/student-dashboard/help']">Contact Us
+              <img src="../../assets/help-circle.svg" class="dropicon">
+            </a></li>
+          <li><button class="dropdown-item mb-2" (click)="logout()">Logout
+              <img src="../../assets/log-out.svg" class="dropicon">
+          </button></li>
+        </ul>
+      </li>
+      <li class="nav-item">
+        <img src="../../assets/log-out.svg" width="20" height="20" class="img logout">
+      <button class="nav-link logout" routerLinkActive="active" (click)="logout()">Logout</button>
+      </li>
+    </span>
+
+  </div>
+</nav>
+
+<!-- Add teacher modal Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+  aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title" id="staticBackdropLabel">Add Teacher</h2>
+      </div>
+      <div class="modal-body">
+        <div class="modalform">
+          <form>
+            <label for="teacherid" class="label">Teacher Class ID<span class="required"></span></label>
+            <input type="text" class="modalinp" id="teacherid" name="TeacherId" placeholder="Enter Teacher class ID" [(ngModel)]="model.TeacherId"     required />
+            <div class="modalbtn">
+              <button type="button" id="Close" class="btn btnclose shadow" data-bs-dismiss="modal">Cancel</button>
+              <button type="button" class="btn btn1 shadow" (click)="requestTeacher()">join
+                <img src="../../assets/arrow-right.svg">
+              </button>
+
+            </div>
+            <span style="color: green;">{{alert}}</span>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,225 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+/***********************css for navbar**********************************/
+.nav-item {
+  text-align: center;
+  display: inline-block;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.navbar-brand {
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.navbar-brand .colortext {
+  margin-left: 8px;
+  color: #0795b5;
+}
+
+.active {
+  border-bottom: 3px solid #0795b5;
+}
+
+.nav-link:hover {
+  border-bottom: 3px solid #0795b5;
+  font-family: 'Roboto', sans-serif;
+}
+
+.search {
+  visibility: hidden;
+}
+
+.btn {
+  background-color: #0795b5;
+  border-radius: 0px;
+}
+
+.btn:focus {
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.form-control {
+  border-radius: 0px;
+  width: 400px;
+}
+
+.form-control:focus {
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.dropdown-text {
+  text-align: center;
+}
+
+.dropdown-divider {
+  margin: 10px 10px;
+}
+
+.dropdown-item:hover {
+  background-color: rgba(7, 149, 181, 0.3);
+}
+
+.dropicon {
+  float: right;
+  width: 20px;
+  height: 20px;
+}
+
+.logout {
+  border: none;
+  background-color: white;
+}
+
+/*****************************************css for modal add teacher*******************************/
+.modal-title {
+  float: left;
+  margin-bottom: -5px;
+}
+
+.modal-title::before {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background-color: #0795b5;
+  position: absolute;
+}
+
+.label {
+  font-size: 18px;
+}
+
+.required::before {
+  content: "*";
+  color: red;
+  margin-right: 3px;
+}
+
+.modalinp {
+  background-color: #eee;
+  border: none;
+  border-radius: 5px;
+  padding: 12px 15px;
+  margin: 8px 0;
+  width: 100%;
+  border: 2px solid #000000;
+}
+
+.modalbtn {
+  float: right;
+}
+
+.modalbtn .btn {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 12px;
+  letter-spacing: 1px;
+  padding: 8px 8px;
+  cursor: pointer;
+}
+
+.btn1 {
+  border: 2px solid #0795b5;
+  background-color: #0795b5;
+  color: white;
+}
+
+.btnclose {
+  margin-right: 8px;
+  border: 2px solid #0795b5;
+  color: #0795b5;
+}
+
+/*media query*/
+@media (max-width: 1260px) {
+  .navsearch {
+    display: none;
+  }
+}
+
+@media (max-width: 1024px) {
+  .home {
+    display: none;
+  }
+  .search {
+    display: none;
+  }
+  .navsearch {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar-brand span {
+    display: none;
+  }
+  .search {
+    display: none;
+  }
+  .mylearning {
+    display: none;
+  }
+  .navsearch {
+    display: none;
+  }
+}
+
+@media (max-width: 540px) {
+  .navbar-brand span {
+    display: none;
+  }
+  .search {
+    display: none;
+  }
+  .navsearch {
+    display: none;
+  }
+}
+
+@media (max-width: 433px) {
+  .navbar-brand span {
+    display: none;
+  }
+  .search {
+    display: none;
+  }
+  .addteacher {
+    display: none;
+  }
+  .navsearch {
+    display: none;
+  }
+}
+
+@media (max-width: 377px) {
+  .addteacher {
+    display: none;
+  }
+  .navsearch {
+    display: none;
+  }
+}
+
+@media (max-width: 296px) {
+  .logout {
+    display: none;
+  }
+  .search {
+    display: none;
+  }
+  .dropdown-menu {
+    left: auto;
+    right: 0;
+  }
+  .navsearch {
+    display: none;
+  }
+}
+/*# sourceMappingURL=student-header.component.css.map */

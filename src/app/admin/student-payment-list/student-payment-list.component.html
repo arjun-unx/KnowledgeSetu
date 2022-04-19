@@ -1,0 +1,54 @@
+<!--*******************************learner details**********************************-->
+<section>
+    <div class="container">
+        <div class=" col-sm-12 col-md-12 col-xd-12 list-card">
+            <div class="card shadow ">
+                <div class="card-header">
+                    <span style="text-align: right; font-weight: bold; font-size: 20px;">Teacher's Payment List</span>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive-xl scroll">
+                        <table class="table table-hover table-bordered">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Sno</th>
+                                    <th scope="col">StudentName</th>
+                                    <th scope="col">TeacherName</th>
+                                    <th scope="col">Class</th>
+                                    <th scope="col">Subject</th>
+                                    <th scope="col">Fees</th>
+                                    <th scope="col">Payment</th>
+                                    <th scope="col">Payment</th>
+                                    <th scope="col">Button</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let model of uploadedlist; let i=index">
+                                    <th scope="row">{{i+1}}</th>
+                                    <td>{{model.StudentName}}</td>
+                                    <td>{{model.TeacherName}}</td>
+                                    <td>{{model.Class}}</td>
+                                    <td>{{model.Subject}}</td>
+                                    <td>{{model.TeacherFees}}</td>
+                                    <td>{{model.Payment}}</td>
+                                    <td>
+                                        <select class="form-select" [(ngModel)]="selectedValue[i]">
+                                            <option [ngValue]="true" >True</option>
+                                            <option [ngValue]="false" selected>False</option>
+                                        </select>
+                                        <h3 style="color: green;">{{this.message[i]}}</h3>
+                                        <h3 style="color: red;">{{this.alert[i]}}</h3>
+                                    </td>
+                                    <td>
+                                        <button class="btn btn-primary" (click)="UpdatePayment(model.StudentId,model.Class,model.Subject,i)">Update</button>
+                                    </td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

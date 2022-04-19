@@ -1,0 +1,150 @@
+<!--header nav-->
+<app-teacher-header></app-teacher-header>
+<!--header nav ends-->
+<section class="bg-margin">
+    <div class="container">
+        <div class=" d-flex  justify-content-center">
+            <div class="col-sm-12 col-xd-12 col-md-12">
+                <div class="row">
+                    <div class="col-sm-4 col-md-4 col-xd-4">
+                        <div class="card shadow">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-center">
+                                    <h1 class="head">{{model.fullName}}</h1>
+                                </div>
+                                <div class="d-flex justify-content-center">
+                                    <p>{{model.email}}</p>
+                                </div>
+                                <div class="d-flex justify-content-center">
+                                    <div class="col-sm-6 col-md-6 col-xd-6 sub">
+                                        <h2 class="subhead">Courses</h2>
+                                        <p class="subpara">4</p>
+                                    </div>
+                                    <div class="col-sm-6 col-md-6 col-xd-6 sub1">
+                                        <h2 class="subhead">Students</h2>
+                                        <p class="subpara">0</p>
+                                    </div>
+                                </div>
+                                <hr class="mb-2">
+                                <p class="biopara">Expertise : {{model.workfield}}</p>
+                                <p class="biopara">{{model.aboutme}}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-8 col-md-8 col-xd-8">
+                        <div class="card shadow formsection">
+                            <div class="card-body">
+                                <div class="header">
+                                    <h2>My account</h2>
+                                </div>
+                                <div>
+                                    <form action="#" #updateform="ngForm" (ngSubmit)="onSubmit(updateform)">
+                                        <h3 class="formpoint">User information</h3>
+                                        <div class="row">
+                                            <div class="col-sm-6 col-md-6 col-xd-6">
+                                                <label for="name" class="label">Name<span
+                                                        class="required"></span></label>
+                                                <input type="text" value="{{model.fullName}}" name="name" id="name"
+                                                    [(ngModel)]="model.fullName" #fullName="ngModel" class="inp"
+                                                    required />
+                                            </div>
+                                            <div class="col-sm-6 col-md-6 col-xd-6">
+                                                <label for="Email" class="label">Email<span
+                                                        class="required"></span></label>
+                                                <input type="Email" value="{{model.email}}" name="email" id="Email"
+                                                    [(ngModel)]="model.email" #email="ngModel" class="inp" required
+                                                    disabled />
+                                            </div>
+                                        </div>
+                                        <label for="dob" class="label">Date Of Birth<span
+                                                class="required"></span></label>
+                                        <input type="date" min="1962-01-01" max="2100-01-01" value="{{model.dob}}"
+                                            name="dob" id="dob" [(ngModel)]="model.dob" #dob="ngModel" class="inp"
+                                            required />
+                                        <hr class="mb-2">
+                                        <h3 class="formpoint">contact information</h3>
+                                        <label for="address" class="label">Address<span class="required"></span></label>
+                                        <input type="text" value="{{model.address}}" name="address" id="address"
+                                            [(ngModel)]="model.address" #address="ngModel" class="inp" required />
+                                        <div class="row">
+                                            <div class="col-sm-4 col-md-4 col-xd-4">
+                                                <label for="city" class="label">City<span
+                                                        class="required"></span></label>
+                                                <input type="text" value="{{model.city}}" name="city" id="city"
+                                                    [(ngModel)]="model.city" #city="ngModel" class="inp" required />
+                                            </div>
+                                            <div class="col-sm-4 col-md-4 col-xd-4">
+                                                <label for="state" class="label">State<span
+                                                        class="required"></span></label>
+                                                <input type="text" value="{{model.state}}" name="state" id="state"
+                                                    [(ngModel)]="model.state" #state="ngModel" class="inp" required />
+                                            </div>
+                                            <div class="col-sm-4 col-md-4 col-xd-4">
+                                                <label for="phoneno" class="label">Phone no<span
+                                                        class="required"></span></label>
+                                                <input type="tel" value="{{model.phoneNumber}}" name=" phoneNumber"
+                                                    id="phoneno" class="inp" [(ngModel)]="model. phoneNumber"
+                                                    #phoneNumber="ngModel" required maxlength="10" disabled />
+                                            </div>
+                                        </div>
+                                        <hr class="mb-2">
+                                        <h3 class="formpoint">About me</h3>
+                                        <h3>Area of Expertise<span class="required"></span></h3>
+                                        <mat-form-field appearance="fill" style="width: 100%;">
+                                            <mat-label>Select Field</mat-label>
+                                            &nbsp;
+                                            <mat-select name="workfield" [(ngModel)]="model.workfield" #class='ngModel'>
+                                                <mat-option value="Physics">Physics</mat-option>
+                                                <mat-option value="Chemistry">Chemistry</mat-option>
+                                                <mat-option value="Biology">Biology</mat-option>
+                                                <mat-option value="Mathematics">Mathematics</mat-option>
+                                                <mat-option value="English">English</mat-option>
+                                                <mat-option value="Hindi">Hindi</mat-option>
+                                                <mat-option value="Yoga">Yoga</mat-option>
+                                                <mat-option value="Martial Arts">Martial Arts</mat-option>
+                                                <mat-option value="Music">Music</mat-option>
+                                                <mat-option value="Zumba">Zumba</mat-option>
+                                                <mat-option value="Art & Craft">Art & Craft</mat-option>
+                                                <mat-option value="Cooking">Cooking</mat-option>
+                                                <mat-option value="German">German</mat-option>
+                                                <mat-option value="Drama">Drama</mat-option>
+                                                <mat-option value="Gymnastics">Gymnastics</mat-option>
+                                                <mat-option value="Chocolate Making">Chocolate Making</mat-option>
+                                                <mat-option value="Gardening">Gardening</mat-option>
+                                                <mat-option value="Gaming">Gaming</mat-option>
+                                                <mat-option value="Fashion">Fashion</mat-option>
+                                                <mat-option value="Baking">Baking</mat-option>
+                                                <mat-option value="Dance">Dance</mat-option>
+                                                <mat-option value="Abacus">Abacus</mat-option>
+                                                <mat-option value="Cake Decorating">Cake Decorating</mat-option>
+                                                <mat-option value="Fitness">Fitness</mat-option>
+
+                                            </mat-select>
+                                        </mat-form-field>
+                                        &nbsp;
+                                        <label for="aboutme" class="label">About me<span
+                                                class="required"></span></label>
+                                        <textarea class="inp" id="aboutme" name="aboutme" placeholder="Enter about me"
+                                            maxlength="250" [(ngModel)]="model.aboutme" #aboutme="ngModel"
+                                            required></textarea>
+                                        <hr class="mb-2">
+                                        <h3 style="color: green;">{{message}}</h3>
+                                        <h3 style="color: darkred;">{{alert}}</h3>
+                                        <div class="bton-group">
+                                            <button class="btn bton shadow bt-back"
+                                                [routerLink]="['/teacher/teacherDashboard']">Back</button>
+                                            <button class="btn bton shadow bt-save" type="submit">Update</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--footer section-->
+<app-teacher-footer></app-teacher-footer>
+<!--end of footer section-->

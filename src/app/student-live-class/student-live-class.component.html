@@ -1,0 +1,52 @@
+<section class="bg-margin">
+    <div class="container">
+        <div class="card shadow formsection">
+            <div class="card-body">
+                <div class="header">
+                    <h2>Live Classes</h2>
+                </div>
+                <div class="scroll" *ngIf="Showlist.length != 0">
+                    <div class="fom" *ngFor="let data of Showlist">
+                        <h3 class="formpoint">information section</h3>
+                        <div class="row">
+                            <div class="col-sm-3 col-md-3 col-xl-3">
+                                <label for="class" class="label">Class</label>
+                                <h3 id="class" class="inp">{{data.class}}</h3>
+                            </div>
+                            <div class="col-sm-3 col-md-3 col-xl-3">
+                                <label for="subject" class="label">Subject</label>
+                                <h3 id="subject" class="inp">{{data.Subjectname}}</h3>
+                            </div>
+                            <div class="col-sm-3 col-md-3 col-xl-3">
+                                <label for="date" class="label">Date</label>
+                                <h3 id="date" class="inp">{{data.Date}}</h3>
+                            </div>
+                            <div class="col-sm-3 col-md-3 col-xl-3">
+                                <label for="time" class="label">Time</label>
+                                <h3 id="time" class="inp">{{data.time}}</h3>
+                            </div>
+                        </div>
+                        <h3 class="formpoint">Url section</h3>
+                        <div class="row">
+                            <div class="col-sm-12 col-md-6 col-xl-6">
+                                <label for="classtopic" class="label">CLass Topic</label>
+                                <h3 id="classtopic" class="inp">{{data.classtopic}}</h3>
+                            </div>
+                            <div class="col-sm-12 col-md-6 col-xl-6">
+                                <label for="liveurl" class="label">CLass URL</label>
+                                <a href={{data.classLink}} target="_blank" ><h3 class="inp" id="liveurl" aria-readonly="true" role="link">{{data.classLink}}</h3></a>
+                            </div>
+                        </div>
+                        <hr class="mb-2">
+                    </div>
+                </div>
+                <div class="" *ngIf="Showlist.length == 0">
+                    <div class="d-flex justify-content-center">
+                        <img src="../../../assets/nodatafound.jpg" class="img-fluid">
+                    </div>
+                    <h1 style="text-align: center; color: red;">No Data Found</h1>
+                </div>
+            </div>
+        </div>    
+    </div>
+</section>

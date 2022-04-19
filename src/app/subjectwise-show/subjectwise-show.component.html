@@ -1,0 +1,38 @@
+<app-student-header></app-student-header>
+
+
+<section class="showsection">
+    <div class="container">
+      <h1 style="text-align: center; margin-bottom: 50px; font-weight: bold; 
+      text-transform: uppercase;letter-spacing: 1px;">{{Subject}}</h1>
+      <div class="row">
+       
+        <div class="col-sm-12 col-md-6 col-xl-3" *ngFor="let list of Showlist">
+          <ng-container *ngIf="list.Class==model.Class">
+          
+          <div class="d-flex justify-content-center" *ngIf="Showlist.length != 0">
+            <div class="card shadow cord">
+              <video>
+                <source src="{{list.VideoURL}}" class="card-img-top" type="video/mp4">
+              </video>
+              <div class="card-body">
+                <h1 class="card-title">{{list.Subject}}</h1>
+                <p class="card-text">Class: {{list.Class}} </p>
+                <p class="card-text">{{list.Name}}</p>
+                <p class="card-text">total Subscribe
+                  <span class="totalprice">&#8377;{{list.AdminFees}}</span>
+                </p>
+                <button class="btn btnsub shadow" style="width: 100%;" (click)="SetData(list)">Subscribe</button>
+              </div>
+            </div>
+          </div>
+          </ng-container>
+        </div>
+
+        <div class="d-flex justify-content-center" *ngIf="Showlist.length == 0">
+          <img src="../../assets/nodatafound.jpg" class="img-fluid">
+        </div>
+       
+      </div>
+    </div>
+  </section>

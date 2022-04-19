@@ -1,0 +1,21 @@
+<!--courser navbar-->
+<div class="container">
+  <div class="navbar-brand">
+    <h1>My Learning</h1>
+  </div>
+  <ul class="nav nav-tabs">
+    <li class="nav-item">
+      <a class="nav-link" [routerLink]="['/student-dashboard/course/Running']" routerLinkActive="active"  tabindex="-1" aria-selected="false" role="tab">Running</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" [routerLink]="['/student-dashboard/course/show-live']" routerLinkActive="active" tabindex="-1" aria-selected="false" role="tab">Live Classes</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" [routerLink]="['/student-dashboard/course/subscribedTeachers']" routerLinkActive="active" tabindex="-1" aria-selected="false" role="tab">Subscribed Teachers</a>
+    </li>
+  </ul>
+</div>
+<!--end of navtab-->
+<section class="bg-margin">
+  <router-outlet></router-outlet>
+</section>

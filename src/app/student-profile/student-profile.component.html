@@ -1,0 +1,110 @@
+<div class="container">
+    <div class=" d-flex  justify-content-center">
+        <div class="col-sm-12 col-xd-12 col-md-12">
+            <div class="row">
+                <div class="col-sm-4 col-md-4 col-xd-4">
+                    <div class="card shadow">
+                        <div class="card-body">
+                          <div class="d-flex justify-content-center">
+                              <h1 class="head">{{model.fullName}}</h1>
+                          </div>
+                          <div class="d-flex justify-content-center">
+                            <p>{{model.email}}</p>
+                          </div>
+                          <div class="d-flex justify-content-center">
+                            <p>{{model.school}}</p>
+                          </div>
+                          <div class="d-flex justify-content-center">
+                                <div class="col-sm-6 col-md-6 col-xd-6 sub">
+                                    <h2 class="subhead">Class</h2>
+                                    <p class="subpara">{{model.Class}}</p>
+                                </div>
+                                <div class="col-sm-6 col-md-6 col-xd-6 sub1">
+                                    <h2 class="subhead">Subject</h2>
+                                    <p class="subpara">{{model.subject}}</p>
+                                </div>
+                          </div>
+                          <hr class="mb-2">
+                          <p class="biopara">{{model.aboutme}}</p>
+                        </div>
+                      </div>
+                </div>
+                <div class="col-sm-8 col-md-8 col-xd-8">
+                    <div class="card shadow formsection">
+                        <div class="card-body">
+                            <div class="header">
+                                <h2>My account</h2>
+                            </div>
+                            <div>
+                                <form action="#" class="fom" #updateform="ngForm" (ngSubmit)="onSubmit(updateform)" >
+                                    <h3 class="formpoint">User information</h3>
+                                    <div class="row">
+                                        <div class="col-sm-6 col-md-6 col-xd-6">
+                                            <label for="fullName" class="label">Full Name<span class="required"></span></label>
+                                            <input type="text" value="{{model.fullName}}" name="fullName" id="fullName" class="inp" [(ngModel)]="model.fullName" #fullName="ngModel" required />
+                                        </div>
+                                        <div class="col-sm-6 col-md-6 col-xd-6">
+                                            <label for="Email" class="label">Email<span class="required"></span></label>
+                                            <input type="Email" value="{{model.email}}" [(ngModel)]="model.email" #email="ngModel" name="email" id="Email" class="inp" required disabled/>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-6 col-md-6 col-xd-6">
+                                            <label for="class" class="label">Class<span class="required"></span></label>
+                                            <input type="text" value="{{model.Class}}" [(ngModel)]="model.Class" #Class="ngModel" name="class" id="class" class="inp" required />
+                                        </div>
+                                        <div class="col-sm-6 col-md-6 col-xd-6">
+                                            <label for="school" class="label">School<span class="required"></span></label>
+                                            <input type="text" value="{{model.school}}" [(ngModel)]="model.school" #school="ngModel" name="school" id="school" class="inp" required />
+                                        </div>
+                                    </div>
+                                    <label for="Subject" class="label">Subject<span class="required"></span></label>
+                                    <input type="text" value="{{model.subject}}" [(ngModel)]="model.subject" #subject="ngModel" name="subject" id="Subject" class="inp" required />
+                                    <hr class="mb-2">
+                                    <h3 class="formpoint">contact information</h3>
+                                    <div class="row">
+                                        <div class="col-sm-6 col-md-6 col-xd-6">
+                                            <label for="phone" class="label">Phone no<span class="required"></span></label>
+                                            <input type="tel" value="{{model.phoneNumber}}" [(ngModel)]="model.phoneNumber" #phoneNumber="ngModel" name="phoneNumber" id="phone" class="inp" required maxlength="10" disabled/>
+                                        </div>
+                                        <div class="col-sm-6 col-md-6 col-xd-6">
+                                            <label for="alterphone" class="label">Alternate Phone no</label>
+                                            <input type="tel" value="{{model. AlternatePhoneno}}" [(ngModel)]="model.AlternatePhoneno" #AlternatePhoneno="ngModel" name="AlternatePhoneno" id="alterphone" class="inp" maxlength="10" required/>
+                                        </div>
+                                    </div>
+                                    <label for="address" class="label">Address<span class="required"></span></label>
+                                    <input type="text" value="{{model.address}}"  [(ngModel)]="model.address" #address="ngModel" name="address" id="address" class="inp" required />
+                                    <div class="row">
+                                        <div class="col-sm-4 col-md-4 col-xd-4">
+                                            <label for="name" class="label">City<span class="required"></span></label>
+                                            <input type="text" value="{{model.city}}" [(ngModel)]="model.city" #city="ngModel" name="city" id="name" class="inp" required />
+                                        </div>
+                                        <div class="col-sm-4 col-md-4 col-xd-4">
+                                            <label for="state" class="label">State<span class="required"></span></label>
+                                            <input type="text" value="{{model.state}}" [(ngModel)]="model.state" #state="ngModel" name="state" id="state" class="inp" required />
+                                        </div>
+                                        <div class="col-sm-4 col-md-4 col-xd-4">
+                                            <label for="postalcode" class="label">Postal Code<span class="required"></span></label>
+                                            <input type="tel" value="{{model.postalcode}}" [(ngModel)]="model.postalcode" #postalcode="ngModel" name="postalcode" id="postalcode" class="inp" required maxlength="6"/>
+                                        </div>
+                                    </div>
+                                    <hr class="mb-2">
+                                    <h3 class="formpoint">About me</h3>
+                                    <label for="aboutme" class="label">About me<span class="required"></span></label>
+                                    <textarea class="inp" id="aboutme" name="aboutme" [(ngModel)]="model.aboutme" #aboutme="ngModel" placeholder="Enter about me" maxlength="250" required></textarea>
+                                    <hr class="mb-2">
+                                    <h3  style="color: green;">{{message}}</h3>
+                                    <h3  style="color: darkred;">{{alert}}</h3>
+                                    <div class="bton-group">
+                                        <button class="btn bton shadow bt-back" [routerLink]="['/main-pannel']">Back</button>
+                                        <button class="btn bton shadow bt-save" type="submit">Update</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+        </div>
+    </div>    
+</div>

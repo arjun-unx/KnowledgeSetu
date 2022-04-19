@@ -1,0 +1,33 @@
+<!--nav-section-->
+<app-student-header></app-student-header>
+<!--nav-section end-->
+
+
+<!-- change password form section start-->
+<section class="form-section">
+    <div class="d-flex justify-content-center">
+        <div class="col-6 col-auto mx-auto mt-5">
+            <div class="d-flex justify-content-center mb-5">
+                <h1 class="head-text">Change Password</h1>
+            </div>
+            <form class="bg-form" #changepassowd="ngForm">
+                <div class="mb-3">
+                    <label for="email" class="form-label">Enter Your Email address</label>
+                    <input type="email" class="form-control mb-5" [(ngModel)]="model.newemail" id="email" name="newemail" #Newemail="ngModel" placeholder="Enter your Email address" required/>
+                </div> 
+                <span style="color: darkred;">{{alert}}</span>
+                <span style="color: green;">{{message}}</span>
+                <div class="bton-group">
+                    <button [routerLink]="['/main-pannel']" class="bton bt-dark">Back</button>
+                    <button type="submit" class="bton bt-color" (click)="onSubmit()">Update</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+<!-- change password form section ends-->
+<!-- change passowrd doesnt workd-->
+
+<!--*************************footer section************************************-->
+<app-teacher-footer></app-teacher-footer>
+<!--************************************footer End********************************-->

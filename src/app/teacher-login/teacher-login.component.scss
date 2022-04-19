@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=RocknRoll+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+/*---------------------------------------------------------------------------------*/
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+/*loader css code start*/
+.display{
+	display: block;
+}
+.display_off{
+	display: none;
+}
+.load{
+	display: block;
+}
+.loader{
+	background-color: #fff;
+	padding: 20px 20px;
+	border: none;
+	border-radius: 10px;
+	width: fit-content;
+	height: fit-content;
+	position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+	z-index: 100;
+}
+.loader div{
+    height: 100px;
+    width: 100px;
+    border: 12px solid #eee;
+    border-top-color: #0795b5;
+    border-radius: 50%;
+    animation: spin 1.5s infinite linear;
+}
+@keyframes spin{
+    100%{
+        transform: rotate(360deg);
+    }
+} 
+
+/*login and signup css start*/
+
+.bg-margin{
+	margin-top: 150px;
+}
+.text .para{
+	font-size: 20px;
+	font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+	letter-spacing: 1px;
+	line-height: 1.8;
+	color: rgba($color: #000000, $alpha: 0.8);
+}
+.card-head1{
+	text-decoration: none;
+	outline: none;
+}
+.card-head1 .colortext{
+	color: #0795b5;
+	font-size: 30px;
+	font-family: 'Luckiest Guy', cursive;
+ }
+ .card-head1 .plaintext{
+	 color: #000;
+	 font-size: 30px;
+	 font-family: 'Luckiest Guy', cursive;
+ }
+.loginimg{
+	width: 100%;
+	height: 200px;
+}
+.card{
+	display: block;
+	border: none;
+	border-radius: 0%;
+}
+.showcard{
+	background-color: #eee;
+	padding-top: 30px;
+	padding-right: 100px;
+	padding-left: 100px;
+	padding-bottom: 30px;
+}
+.formcard{
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top: 50px;
+	padding-bottom: 20px;
+}
+.tab-content{
+	margin-top: 50px;
+}
+form {
+	background-color: #FFFFFF;
+	display: -moz-inline-box;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	height: 100%;
+	text-align: center;
+}
+.tabs{
+	border: 2px solid #0795b5;
+	text-decoration: none;
+	color: #0795b5;
+	font-weight: bold;
+	margin-right: 5px;
+	padding: 5px 5px;
+	border-radius: 4px;
+}
+.act{
+	background-color: #0795b5;
+	color: #fff;
+	font-weight: bold;
+	margin-right: 5px;
+	padding: 7px 7px;
+	border-radius: 4px;
+	text-decoration: none;
+	border: none;
+}
+form .link{
+	margin-top: 10px;
+}
+input {
+	background-color: #eee;
+	border: none;
+	padding: 12px 15px;
+	margin: 8px 0;
+	width: 100%;
+}
+h1 {
+	font-weight: bold;
+	margin: 0;
+}
+p {
+	font-size: 14px;
+	font-weight: 100;
+	line-height: 20px;
+	letter-spacing: 0.5px;
+	margin: 20px 0 30px;
+}
+.bton {
+	border-radius: 3px;
+	border: 1px solid #0795b5;
+	background-color:  #0795b5;
+	color: #FFFFFF;
+	font-size: 15px;
+	font-weight: bold;
+	width: 100%;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+
+/***********************media query*******************************/
+@media(max-width:1198){
+	.showcard{
+		padding: 20px 20px;
+	}
+	.formcard{
+		padding-left: 20px;
+		padding-right: 20px;
+		padding-top: 50px;
+		padding-bottom: 20px;
+	}
+}
+@media(max-width:1024px){
+	.showcard{
+		padding: 20px 20px;
+	}
+}
+@media(max-width:768px){
+	.col-sm-8,.col-md-8{
+		width: 100%;
+	}
+	.col-sm-4,.col-md-4{
+		margin-top: 50px;
+		width: 100%;
+	}
+	
+}
+@media(max-width:450px){
+	.showcard{
+		padding: 20px 20px;
+	}
+   
+}
+@media(max-width:320px){
+	.showcard{
+		padding: 8px 8px;
+	}
+	.card-head1 .colortext{ 
+		font-size: 20px;
+	 }
+	 
+	 .card-head1 .plaintext{
+		 font-size: 20px;
+	 }
+}
+@media(max-width:280px){
+    .arrowbtn{
+        width: 17px;
+        height: 17px;
+    }
+	.showcard{
+		padding: 5px 5px;
+	}
+	.formcard{
+		padding-left: 10px;
+		padding-right: 10px;
+		padding-top: 50px;
+		padding-bottom: 20px;
+	}
+
+}

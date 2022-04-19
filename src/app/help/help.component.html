@@ -1,0 +1,26 @@
+<section class="form-section">
+    <div class="d-flex justify-content-center">
+        <div class="col-6 col-auto mx-auto mt-5">
+            <div class="d-flex justify-content-center mb-5">
+                <h1 class="head-text">Get in touch</h1>
+            </div>
+            <form class="bg-form" #helpForm="ngForm" (ngSubmit)=onSubmit()>
+                <div class="mb-3">
+                    <label for="name" class="form-label">What is your name?</label>
+                    <input type="text" class="form-control mb-5" id="name" name="fullname" placeholder="Enter your full name" [(ngModel)]="help.fullName" #fullName="ngModel" required/>
+                </div> 
+                <div class="mb-3">
+                    <label for="email" class="form-label">What is your Email address?</label>
+                    <input type="email" class="form-control mb-5" id="email" name="email" placeholder="E.g.name@webside.com" [(ngModel)]="help.email" #email="ngModel" required/>
+                </div>
+                <div class="mb-3">
+                    <label for="message" class="form-label">Your message</label>
+                    <textarea type="text" class="form-control mb-5" id="message" name="query" Placeholder="How can I help you?" [(ngModel)]="help.query" #query="ngModel" required maxlength="250"></textarea>
+                </div>
+                <h3 style="color: red;">{{this.alert}}</h3>
+                <h3 style="color: green;">{{this.message}}</h3>
+                <button type="submit" class="bton">Send message</button>
+            </form>
+        </div>
+    </div>
+</section>

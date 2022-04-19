@@ -1,0 +1,86 @@
+
+/*************************************total card css start***************************************/
+.totalcard{
+    border: none;
+    margin-bottom: 50px;
+}
+.bg-color1{
+    background-color: rgba($color: #ffc107, $alpha: 0.8);
+}
+.bg-color2{
+    background-color: rgba($color: #ff1744, $alpha: .8);
+}
+.bg-text{
+    font-size: 30px;
+    font-weight: bold;
+    color: #ffffff;
+    padding: 2px 3px;
+	letter-spacing: 2px;
+}
+.bg-para{
+    font-size: 30px;
+    color: #ffffff;
+    padding: 2px 3px;
+	letter-spacing: 1px;
+}
+.logo{
+    padding: 2px 3px;
+    width: 100px;
+}
+/*********************************student &teacher list css********************************************/
+
+.detailsbtn{
+    border-radius: 5px;
+    background-color: #239463;
+	color: #ffffff;
+	font-size: 14px;
+	font-weight: bold;
+	padding: 12px 45px;
+	letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+/*********************************media query***********************************************/
+@media (max-width: 990px){
+    .link.active,.link:hover{
+        background: none;
+        margin-left: 0px;
+        color: #ffffff;
+    }
+    .adminname{
+        text-align: center;
+        justify-content: center;
+        font-weight: bold;
+        font-size: 40px;
+        margin-top: 15px;
+        color: #239463;
+        text-transform: uppercase;
+    }
+}
+@media (max-width: 858px){
+    .link.active,.link:hover{
+        background: none;
+        margin-left: 0px;
+        color: #ffffff;
+    }
+    .adminname{
+        text-align: center;
+        justify-content: center;
+        font-weight: bold;
+        font-size: 30px;
+        margin-top: 15px;
+        color: #239463;
+        text-transform: uppercase;
+    }
+}
+@media (max-width: 280px){
+    .adminname{
+        text-align: center;
+        justify-content: center;
+        font-weight: bold;
+        font-size: 25px;
+        margin-top: 15px;
+        color: #239463;
+        text-transform: uppercase;
+    }
+}

@@ -1,0 +1,648 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;800&display=swap");
+/*-----------------------------------------------------------------------------------*/
+/*main section css start*/
+.mobileshow {
+  display: none;
+}
+
+.ipadshow {
+  display: none;
+}
+
+.homeimg {
+  margin-top: 90px;
+}
+
+.hometext {
+  margin-top: 200px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.hometext h1 {
+  color: #0795b5;
+  font-weight: bolder;
+  font-family: 'Poppins', sans-serif;
+}
+
+.livetext {
+  font-size: 60px;
+  font-weight: bold;
+  margin-top: 40px;
+  margin-bottom: 50px;
+}
+
+.livetext span::before {
+  content: '';
+  -webkit-animation: animate infinite 12s;
+          animation: animate infinite 12s;
+}
+
+@-webkit-keyframes animate {
+  0% {
+    content: 'Live Classes';
+  }
+  20% {
+    content: 'Recorded Lectures';
+  }
+  40% {
+    content: 'Qualified Teachers';
+  }
+  60% {
+    content: 'Live Classes';
+  }
+  80% {
+    content: 'Recorded Lectures';
+  }
+  100% {
+    content: 'Qualified Teachers';
+  }
+}
+
+@keyframes animate {
+  0% {
+    content: 'Live Classes';
+  }
+  20% {
+    content: 'Recorded Lectures';
+  }
+  40% {
+    content: 'Qualified Teachers';
+  }
+  60% {
+    content: 'Live Classes';
+  }
+  80% {
+    content: 'Recorded Lectures';
+  }
+  100% {
+    content: 'Qualified Teachers';
+  }
+}
+
+.lern {
+  background-color: #0795b5;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: 'Poppins', sans-serif;
+  margin-right: 10px;
+  padding: 14px 45px;
+}
+
+.arrowbtn {
+  width: 20px;
+  height: 20px;
+}
+
+.teachbut {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: 3px solid #0795b5;
+  color: #0795b5;
+  font-size: 20px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  padding: 12px 45px;
+  z-index: 99;
+}
+
+.teachbut:hover {
+  color: #FFFFFF;
+  background-color: #0795b5;
+}
+
+.tt {
+  color: #0795b5;
+}
+
+.tetmain {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 100px;
+  -webkit-animation: textanimation 1s ease-in-out;
+          animation: textanimation 1s ease-in-out;
+}
+
+@-webkit-keyframes textanimation {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  100% {
+    letter-spacing: 1px;
+  }
+}
+
+@keyframes textanimation {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  100% {
+    letter-spacing: 1px;
+  }
+}
+
+/*-------------------------------------------------------------------------------------------*/
+/*secondary section css start*/
+.bg-margin-section {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin-top: 150px;
+}
+
+.bg-margin {
+  margin-top: 40px;
+}
+
+.cord {
+  border: none;
+  padding: 10px 10px;
+  height: 180px;
+  background-color: #fff;
+  font-family: 'Poppins', sans-serif;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  z-index: 0;
+}
+
+.cord::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #0795b5;
+  z-index: -2;
+  -webkit-clip-path: circle(10% at 0% 0%);
+          clip-path: circle(10% at 0% 0%);
+  -webkit-transition: -webkit-clip-path .5s ease-in-out;
+  transition: -webkit-clip-path .5s ease-in-out;
+  transition: clip-path .5s ease-in-out;
+  transition: clip-path .5s ease-in-out, -webkit-clip-path .5s ease-in-out;
+}
+
+.cord:hover::after {
+  -webkit-clip-path: circle(80%);
+          clip-path: circle(80%);
+}
+
+.livetext1 {
+  color: #000;
+  font-family: 'Poppins', sans-serif;
+  font-size: 30px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.image {
+  background-color: white;
+  padding: 10px 10px;
+  border-radius: 50%;
+  -webkit-box-shadow: 4px;
+          box-shadow: 4px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  float: right;
+}
+
+.card-text {
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  color: #000;
+  letter-spacing: 1px;
+  margin-top: 0px;
+}
+
+/*-------------------------------------------------------------------------------------------*/
+/*third section css start*/
+.cardsection {
+  border: none;
+  padding: 30px 30px;
+  width: 1000px;
+  display: block;
+}
+
+.cardimg {
+  display: inline-block;
+  margin-top: 30px;
+}
+
+.cardtext {
+  font-family: 'Poppins', sans-serif;
+  font-size: 40px;
+  letter-spacing: 1px;
+  font-weight: bolder;
+  margin-top: 5px;
+  z-index: 1;
+}
+
+.cardtext1 {
+  margin-bottom: 5px;
+}
+
+.cardtext1::before {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 3px;
+  margin-bottom: 5px;
+  background-color: #0795b5;
+  position: absolute;
+}
+
+.textcard {
+  margin-top: 80px;
+  margin-left: 60px;
+}
+
+.cardpara {
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+  z-index: 1;
+  color: grey;
+}
+
+.bg-margin-section1 {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin-top: 150px;
+  margin-bottom: 150px;
+}
+
+/*forth section */
+.contain {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.text-sec {
+  margin-top: 100px;
+}
+
+.lt-text {
+  font-family: 'Poppins', sans-serif;
+  font-size: 80px;
+  margin-bottom: 60px;
+}
+
+.lt-color {
+  color: #0795b5;
+}
+
+.gif {
+  width: 100%;
+}
+
+/********************************media query***********************************/
+@media (max-width: 1402px) {
+  .hometext {
+    margin-top: 180px;
+  }
+  .livetext {
+    margin-top: 40px;
+    margin-bottom: 50px;
+  }
+}
+
+@media (max-width: 1198px) {
+  .hometext {
+    margin-top: 140px;
+  }
+  .livetext {
+    font-size: 40px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+  .tetmain {
+    font-size: 30px;
+    margin-bottom: 70px;
+  }
+  .lern {
+    font-size: 20px;
+    padding: 12px 35px;
+  }
+  .teachbut {
+    font-size: 20px;
+    padding: 12px 45px;
+  }
+  .cord {
+    height: 240px;
+  }
+  .bg-margin-section {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    margin-top: 60px;
+  }
+  .bg-margin {
+    margin-top: 60px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .text-sec {
+    margin-top: 100px;
+  }
+  .gif {
+    margin-top: 50px;
+    width: 100%;
+  }
+  .contain {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .lt-text {
+    font-size: 65px;
+    margin-bottom: 25px;
+  }
+}
+
+@media (max-width: 967px) {
+  .hometext {
+    margin-top: 120px;
+  }
+  .livetext {
+    font-size: 40px;
+    margin-bottom: 40px;
+  }
+  .tetmain {
+    font-size: 30px;
+    margin-bottom: 50px;
+  }
+  .lern {
+    font-size: 15px;
+    padding: 10px 15px;
+  }
+  .teachbut {
+    font-size: 15px;
+    padding: 9px 20px;
+  }
+}
+
+@media (max-width: 769px) {
+  .fullscreenshow {
+    display: none;
+  }
+  .ipadshow {
+    display: block;
+  }
+  .ipadshow .img-fluid {
+    margin-top: 50px;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .ipadshow .ipadcard {
+    margin-top: -100px;
+    padding: 20px 20px;
+  }
+  .ipadshow .ipadcard .card-body h1 {
+    color: #0795b5;
+    font-weight: bolder;
+  }
+  .ipadshow .ipadcard .livetext {
+    font-size: 50px;
+    margin-bottom: 50px;
+  }
+  .ipadshow .ipadcard .tetmain {
+    font-size: 40px;
+    margin-bottom: 60px;
+  }
+  .ipadshow .ipadcard .lern {
+    font-size: 20px;
+    margin-right: 10px;
+    padding: 15px 30px;
+  }
+  .ipadshow .ipadcard .teachbut {
+    font-size: 20px;
+    padding: 13px 35px;
+  }
+  .cord {
+    height: 280px;
+    margin-bottom: 20px;
+  }
+  .livetext1 {
+    font-size: 23px;
+  }
+  .bg-margin-section {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    margin-top: 50px;
+  }
+  .bg-margin {
+    margin-top: 50px;
+  }
+  .text-sec {
+    margin-top: 100px;
+  }
+  .gif {
+    margin-top: 50px;
+    width: 100%;
+  }
+  .contain {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .lt-text {
+    font-size: 50px;
+    margin-bottom: 25px;
+  }
+}
+
+@media (max-width: 566px) {
+  .hometext {
+    margin-top: 30px;
+  }
+  .fullscreenshow {
+    display: none;
+  }
+  .mobileshow {
+    display: block;
+  }
+  .ipadshow {
+    display: none;
+  }
+  .cord {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    margin-bottom: 20px;
+  }
+  .bg-margin-section {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    margin-top: 20px;
+  }
+  .bg-margin {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 541px) {
+  .navbar-brand span {
+    display: none;
+  }
+  .cord {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    margin: 10px;
+  }
+  .bg-margin-section {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    margin-top: 30px;
+  }
+  .bg-margin {
+    margin-top: 30px;
+  }
+  .text-sec {
+    margin-top: 0px;
+    margin-bottom: 50px;
+  }
+  .gif {
+    margin-top: 50px;
+    width: 100%;
+  }
+  .contain {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .lt-text {
+    font-size: 65px;
+    margin-bottom: 25px;
+  }
+}
+
+@media (max-width: 450px) {
+  .navbar-brand span {
+    display: none;
+  }
+  .text-sec {
+    margin-top: 0%;
+  }
+  .gif {
+    margin-top: 50px;
+    width: 100%;
+  }
+  .contain {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .lt-text {
+    font-size: 45px;
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 321px) {
+  .hometext h1 {
+    font-size: 20px;
+  }
+  .livetext {
+    font-size: 30px;
+    margin-bottom: 30px;
+  }
+  .tetmain {
+    font-size: 20px;
+    margin-bottom: 40px;
+  }
+  .lern {
+    font-size: 15px;
+    padding: 10px 15px;
+  }
+  .teachbut {
+    font-size: 15px;
+    padding: 9px 20px;
+  }
+  .bg-margin-section {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    margin-top: 20px;
+  }
+  .bg-margin {
+    margin-top: 20px;
+  }
+  .text-sec {
+    margin-top: 0%;
+  }
+  .gif {
+    margin-top: 50px;
+    width: 100%;
+  }
+  .contain {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .lt-text {
+    font-size: 40px;
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 280px) {
+  .lern {
+    font-size: 10px;
+    padding: 10px 15px;
+  }
+  .arrowbtn {
+    width: 17px;
+    height: 17px;
+  }
+  .teachbut {
+    font-size: 10px;
+    padding: 9px 20px;
+  }
+  .about {
+    font-size: 12px;
+    font-weight: bold;
+    padding: 10px 25px;
+  }
+  .cord {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    margin: 8px;
+  }
+  .bg-margin-section {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    margin-top: 20px;
+  }
+  .bg-margin {
+    margin-top: 20px;
+  }
+  .text-sec {
+    margin-top: 0px;
+  }
+  .gif {
+    margin-top: 50px;
+    width: 100%;
+  }
+  .contain {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .lt-text {
+    font-size: 30px;
+    margin-bottom: 10px;
+  }
+}
+/*# sourceMappingURL=home.component.css.map */

@@ -1,0 +1,65 @@
+<div >
+  <h2 mat-dialog-title>Let's verify yourself....</h2>
+  <h4> Please upload your Resume and Documents.</h4>
+  <hr class="mb-2">
+  <mat-dialog-content>
+    <div class="form-section" class="showpop">
+      <form>
+        <div class="mb-3">
+          <label for="Resume" class="form-label label">Resume(pdf)<span style="color: red;">*</span></label>
+          <input type="file" name="Resume" id="Resume" class=" inp" (change)="handleResumeFile($event)" accept=".pdf" required>
+        </div>
+        <div class="mb-3">
+          <label for="result10" class="form-label label">10th Class Result(pdf/jpg)<span style="color: red;">*</span></label>
+          <input type="file" name="result10" id="result10" class=" inp" (change)="handletenthresult($event)" accept=".jpg,.jpeg,.pdf"
+            required>
+        </div>
+        <div class="mb-3">
+          <label for="result12" class="form-label label">12th Class Result(pdf/jpg)<span style="color: red;">*</span></label>
+          <input type="file" name="result12" id="result12" class=" inp" (change)="handletewelvethresult($event)" accept=".jpg,.jpeg,.pdf"
+            required>
+        </div>
+        <div class="mb-3">
+          <label for="Degree" class="form-label label">Graduation Degree(pdf)<span style="color: red;">*</span></label>
+          <input type="file" class="inp" id="Degree" name="graduationdegree" (change)="handlegraduationdegree($event)" accept=".pdf" aria-describedby="docHelp" required>
+          <div id="docHelp" class="form-text">If multiple degree put all the Degree into one Pdf file</div>
+        </div>
+        <div class="mb-3">
+          <label for="DegreePost" class="form-label label">Post Graduation Degree(pdf)</label>
+          <input type="file" class="inp" id="DegreePost" name="Postgraduationdegree" (change)="handlePostgraduationdegree($event)" accept=".pdf">
+        </div>
+        <div class="mb-3">
+          <label for="b.ed/dldDegree" class="form-label label">b.ed/dld(pdf)</label>
+          <input type="file" class="inp" id="b.ed/dldDegree" name="b.ed/dlddegree" (change)="handlebedordlddegree($event)" accept=".pdf" >
+          
+        </div>
+        <div class="mb-3">
+          <label for="DegreeTET/CTET" class="form-label label">TET/CTET(pdf)</label>
+          <input type="file" class="inp" id="DegreeTET/CTET" name="TET/CTETdegree" (change)="handleTETorCTETdegree($event)" accept=".pdf" >
+          
+        </div>
+        <div class="mb-3">
+          <label for="DegreePHD/PHIL" class="form-label label">PHD/PHIL(pdf)</label>
+          <input type="file" class="inp" id="DegreePHD/PHIL" name="PHD/PHILdegree" (change)="handlePHDorPHILdegree($event)" accept=".pdf" >
+          
+        </div>
+        <div class="mb-3">
+          <label for="DegreeICT" class="form-label label">ICT(pdf)</label>
+          <input type="file" class="inp" id="DegreeICT" name="ICTdegree" (change)="handleICTdegree($event)" accept=".pdf" aria-describedby="docHelp" >
+        </div>
+        <div class="mb-3">
+          <label for="oDegree" class="form-label label">others(pdf)</label>
+          <input type="file" class="inp" id="oDegree" name="otherDegree" (change)="handleotherdegree($event)" accept=".pdf" aria-describedby="docHelp">
+          <div id="docHelp" class="form-text">If other degree put all the Degree into one Pdf file</div>
+        </div>
+      </form>
+    </div>
+  </mat-dialog-content>
+
+  <mat-dialog-actions class="bton-group">
+    <span style="color: red;">{{message}}</span>
+    <button  class="bton bt-color-dark" (click)="onCancel()">Cancel</button>
+    <button class="bton bt-color" (click)="onConfirm()">Confirm</button>
+  </mat-dialog-actions>
+
+</div>

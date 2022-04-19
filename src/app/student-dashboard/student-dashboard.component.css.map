@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,8EAA8E;AAC9E,AAAA,UAAU,CAAA;EACP,UAAU,EAAE,IAAI;CAClB;;AACD;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;GA2NG",
+    "sources": [
+        "student-dashboard.component.scss"
+    ],
+    "names": [],
+    "file": "student-dashboard.component.css"
+}

@@ -1,0 +1,21 @@
+/*css for nav section*/
+.navbar-brand{
+    margin-top: 20px;
+}
+.nav-item{
+    display: inline;
+}
+.nav-link{
+    color: #000;
+    font-size: 20px;
+}
+.nav-item .nav-link.active{
+    color: #0795b5;
+}
+.nav-item .nav-link:hover{
+    color: #0795b5;
+}
+/*router section css*/
+.bg-margin{
+    margin-top: 30px;
+}

@@ -1,0 +1,80 @@
+<!--header nav section-->
+<app-teacher-header></app-teacher-header>
+<!--header nav section ends-->
+<section class="bg-margin">
+    <div class="container">
+        <div class="d-flex justify-content-center">
+            <div class="col-sm-12 col-md-12 col=-xd-12">
+                <div class="card shadow">
+                    <div class="head">
+                        <h2>Live Classes</h2>
+                    </div>
+                    <div class="card-body cord">
+                        <form action="#" class="fom" #liveform=ngForm (ngSubmit)="onSubmit(liveform)">
+                            <label for="playlist" class="label">class<span class="required"></span></label>
+                            <mat-form-field appearance="fill" style="width: 100%;">
+                                <mat-label>Select Class</mat-label>
+                                <mat-select name="class" [(ngModel)]="model.class" #class='ngModel' required>
+                                    <mat-option value="First">I</mat-option>
+                                    <mat-option value="Second">II</mat-option>
+                                    <mat-option value="Third">III</mat-option>
+                                    <mat-option value="Fouth">IV</mat-option>
+                                    <mat-option value="Fifth">V</mat-option>
+                                    <mat-option value="Sixth">VI</mat-option>
+                                    <mat-option value="Seventh">VII</mat-option>
+                                    <mat-option value="Eighth">VIII</mat-option>
+                                    <mat-option value="Ninth">IX</mat-option>
+                                    <mat-option value="Tenth">X</mat-option>
+                                    <mat-option value="Eleventh">XI</mat-option>
+                                    <mat-option value="Twelfth">XII</mat-option>
+
+                                </mat-select>
+                            </mat-form-field>
+
+
+                            <label>Select Subject</label>
+                            <input type="text" class="form-control" name="Subject" id="Subject" class="inp"
+                                [(ngModel)]="model.Subjectname" required />
+
+                            <!---->
+                            <label for="topic" class="label">class Topic<span class="required"></span></label>
+                            <input type="text" placeholder="Live class topic" id="topic" class="inp"
+                                [(ngModel)]="model.classtopic" name="classtopic" #classtopic="ngModel" required />
+                            <!---->
+                            <label for="classLink" class="label">class Link<span class="required"></span></label>
+                            <input type="url" placeholder="Live class Link" id="classLink" class="inp"
+                                [(ngModel)]="model.classLink" name="classLink" #classLink="ngModel" required />
+                            <!---->
+                            <div class="row">
+                                <div class="col-sm-6 col-md-6 col-xd-6">
+                                    <label for="date" class="label">Date<span class="required"></span></label>
+                                    <input type="date" min="1962-01-01" max="2100-01-01" id="date" class="inp"
+                                        [(ngModel)]="model.Date" name="Date" #Date="ngModel" required />
+                                </div>
+                                <div class="col-sm-6 col-md-6 col-xd-6">
+                                    <label for="time" class="label">Time<span class="required"></span></label>
+                                    <input type="time" id="time" class="inp" [(ngModel)]="model.time" name="time"
+                                        #time="ngModel" required />
+                                </div>
+                            </div>
+                            <hr class="mb-4">
+                            <h2 style="color: darkred;">{{this.alert}}</h2>
+                            <h2 style="color: green;">{{this.message}}</h2>
+                            <div class="bton-group">
+                                <button class="btn bton shadow bt-back"
+                                    [routerLink]="['/teacher/teacherDashboard']">Back</button>
+                                <button class="btn bton shadow bt-save" type="submit">
+                                    <img class="img-fluid" src="../../assets/publish-white-18dp.svg" width="20"
+                                        height="20">Save
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--footer section start-->
+<app-teacher-footer></app-teacher-footer>
+<!--footer section end-->

@@ -1,0 +1,87 @@
+<!--*********************sidenav section******************************-->
+<div class="d-flex" id="wrapper">
+  <!-- Sidebar -->
+  <div class="border-right shadow" id="sidebar-wrapper">
+    <div class="sidebar-heading">
+      <img src="../../assets/ks.png" class="img-fluid">
+      <h1>Knowledge Setu</h1>
+    </div>
+    <div class="list-group">
+      <a [routerLink]="['/admin/admin/admin-home']" routerLinkActive="active" class=" mb-1 sidenav-link">
+        <i class="fas fa-h-square img"></i>Home
+      </a>
+      <a [routerLink]="['/admin/admin/payment']" routerLinkActive="active" class="mb-1 sidenav-link">
+        <i class="fas fa-credit-card img"></i>Payment</a>
+      <a [routerLink]="['/admin/admin/new-admin']" routerLinkActive="active" class="mb-1 sidenav-link">
+        <i class="fas fa-user-shield img"></i>New admin</a>
+      <a [routerLink]="['/admin/admin/newteacher-list']" routerLinkActive="active" class="mb-1 sidenav-link">
+        <i class="fas fa-user-plus img"></i>
+        New Teacher<span class="notify" id="notify">{{ no }}</span>
+      </a>
+      <a [routerLink]="['/admin/admin/learner-list']" routerLinkActive="active" class="mb-1 sidenav-link">
+        <i class="fas fa-user-graduate img"></i>Learners</a>
+      <a [routerLink]="['/admin/admin/teacher-list']" routerLinkActive="active" class="mb-1 sidenav-link">
+        <i class="fas fa-chalkboard-teacher img"></i>Teachers</a>
+
+      <a [routerLink]="['/admin/admin/teacher-payment-handle']" routerLinkActive="active" class="mb-1 sidenav-link">
+        <i class="fas fa-money-bill-alt img"></i>
+        Lecture's Payment
+      </a>
+      <a [routerLink]="['/admin/admin/student-payment-list']" routerLinkActive="active" class="mb-1 sidenav-link">
+        <i class="fas fa-money-bill-alt img"></i>
+        Student Payment
+      </a>
+      <a [routerLink]="['/admin/admin/forgotpassword']" routerLinkActive="active" class="mb-1 sidenav-link">
+        <i class="fas fa-lock img"></i>
+        Change Password
+      </a>
+      <a [routerLink]="['/admin/admin/ebooks']" routerLinkActive="active" class="mb-1 sidenav-link">
+        <i class="fas fa-book"></i>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Free Content
+      </a>
+      <a [routerLink]="['/admin/admin/help']" routerLinkActive="active" class="mb-1 sidenav-link">
+        <i class="fas fa-hands-helping img"></i>
+        Help
+      </a>
+      <a class="mb-1 sidenav-link" (click)="Logout()">
+        <i class="fas fa-sign-out-alt img"></i>logout</a>
+      <hr class="mb-2">
+      <div class="d-flex justify-content-center">
+        <button class="btn sidetoggle shadow" type="button" id="menu-toggle1">
+          <img src="../../../assets/chevron_left-white-18dp.svg" width="30" height="30">
+        </button>
+      </div>
+    </div>
+  </div>
+  <!-- /#sidebar-wrapper -->
+  <div id="page-content-wrapper">
+    <nav class="navbar navbar-expand-lg navbar-dark shadow bg-col1">
+      <div class="container">
+        <a class="btn lefttoggle" type="button" id="menu-toggle">
+          <img src="../../assets/menu_open-white-18dp.svg" width="30" height="30">
+        </a>
+        <a class="navbar-brand">Hi, </a>
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0"></ul>
+        <form class="d-flex flex1">
+          <a class="head-logout" (click)="Logout()">
+            <i class="fas fa-sign-out-alt img"></i>logout
+          </a>
+
+        </form>
+      </div>
+    </nav>
+    <div class="show" id="show">
+      <div class="container">
+        <section class="bg-margin">
+          <router-outlet></router-outlet>
+        </section>
+
+      </div>
+      <footer class="footer shadow">
+        <div class="mb-0 d-flex justify-content-center">
+          <p>&copy;Copyright Krash IT Services.All Right Reserved</p>
+        </div>
+      </footer>
+    </div>
+  </div>
+  <!---->

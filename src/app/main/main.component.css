@@ -1,0 +1,182 @@
+/****************************css for my learning section***************************/
+.coursetext {
+  padding-left: 10px;
+  text-align: left;
+}
+
+.courselink {
+  float: right;
+}
+
+.video {
+  width: 200px;
+  height: 100px;
+  margin-right: 10px;
+  float: left;
+}
+
+.subject {
+  float: right;
+  display: block;
+  font-weight: lighter;
+  margin-top: 20px;
+  margin-left: 10px;
+  padding-left: 10px;
+}
+
+.subject .intext {
+  font-size: 10px;
+}
+
+/******************************css for start section*************************************/
+.starttext {
+  font-size: 30px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.starttext span {
+  color: #0795b5;
+  font-size: 30px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/*************************************css for container coursel********************************************/
+.subjecttext {
+  font-size: 30px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.subjecttext1::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 3px;
+  background-color: #0795b5;
+  position: absolute;
+}
+
+.card {
+  border: none;
+  width: 18rem;
+  border-radius: 0px;
+  margin-left: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.totalprice {
+  font-weight: bold;
+  font-size: 20px;
+  float: right;
+}
+
+.btnsub {
+  border: 2px solid #0795b5;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 1px;
+  padding: 8px 8px;
+  cursor: pointer;
+  background-color: #0795b5;
+  color: white;
+}
+
+.show1 {
+  margin-top: 50px;
+}
+
+.bg-margin {
+  padding-top: 30px;
+}
+
+.main-carousel {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.bookmark {
+  float: right;
+  cursor: default;
+}
+
+.carousel-cell {
+  margin-right: 20px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.carousel-cell::before {
+  display: block;
+}
+
+/* smaller, dark, rounded square */
+.flickity-button {
+  background: #333;
+}
+
+.flickity-button:hover {
+  background: #F90;
+}
+
+.flickity-prev-next-button {
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
+}
+
+/* icon color */
+.flickity-button-icon {
+  fill: white;
+}
+
+/* position outside */
+.flickity-prev-next-button.previous {
+  left: -40px;
+}
+
+.flickity-prev-next-button.next {
+  right: -40px;
+}
+
+/*-------------------------------------------------------------------------------------------*/
+/*footer css start*/
+.footer {
+  background: #0795b5;
+  margin-top: 100px;
+}
+
+.comtt {
+  font-weight: bolder;
+}
+
+.ptext {
+  color: #FFFFFF;
+}
+
+/******************************media query*************************************/
+@media (max-width: 990px) {
+  .img {
+    display: none;
+  }
+  .active {
+    color: #0795b5;
+  }
+}
+
+@media (max-width: 280px) {
+  .card {
+    border: none;
+    width: 15rem;
+    border-radius: 0px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}
+/*# sourceMappingURL=main.component.css.map */

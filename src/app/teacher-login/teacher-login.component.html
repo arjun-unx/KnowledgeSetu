@@ -1,0 +1,123 @@
+<app-header></app-header>
+<!--header section end-->
+<!--login section starts-->
+<section class="bg-margin">
+	<div class="container">
+		<div class="card showcard shadow">
+			<div class="display_off" id="loading">
+				<div class="card loader">
+					<div></div>
+				</div>
+			</div>
+			<div class="card-body">
+				<div class="row">
+					<div class="col-sm-8 col-md-8 col-xd-8">
+						<div>
+							<a class="card-head1">
+								<span class="colortext">Knowledge </span><span class="plaintext">Setu</span>
+							</a>
+						</div>
+						<div class="text">
+							<p class="para">#1 India's Best Teaching and Learning Platform Which Provide live
+								Interaction With Educator
+								As well as Recorded Lectures
+							</p>
+						</div>
+						<div class="image">
+							<img src="../../assets/welcomeloginimage.svg" class="img-fluid loginimg">
+						</div>
+
+					</div>
+					<div class="col-sm-4 col-md-4 col-xd-4">
+						<div class="card formcard shadow">
+							<div class="card-body">
+								<ul class="nav mb-3" id="pills-tab" role="tablist">
+									<li class="nav-item" role="presentation">
+										<a class="tabs shadow act" id="pills-home-tab" data-bs-toggle="pill"
+											data-bs-target="#pills-signin" type="button" role="tab"
+											aria-controls="pills-signin" aria-selected="true">Sign In</a>
+									</li>
+									<li class="nav-item" role="presentation">
+										<a class="tabs shadow" id="pills-profile-tab" data-bs-toggle="pill"
+											data-bs-target="#pills-profile" type="button" role="tab"
+											aria-controls="pills-profile" aria-selected="false">Sign Up</a>
+									</li>
+								</ul>
+								<div class="tab-content" id="pills-tabContent">
+									<div class="tab-pane fade show active" id="pills-signin" role="tabpanel"
+										aria-labelledby="pills-home-tab">
+										<form class="was-validated" enctype="multipart/form-data" #loginForm="ngForm"
+											(ngSubmit)=onSubmit($event)>
+											<h1>Sign in</h1>
+											<input type="email" class="form-control" placeholder="Email" name="email"
+												[(ngModel)]='loginDetail.email' #email='ngModel' required />
+											<input type="password" class="form-control" placeholder="Password"
+												name="password" [(ngModel)]='loginDetail.password' #password='ngModel'
+												required />
+											<span style="color: red;">{{alert}}</span>
+											<button class="signInBtn" (click)="onSubmit('SignIn')"
+												[disabled]=!loginForm.form.valid type="button" class="bton shadow">Sign
+												In</button>
+											<a [routerLink]="['/forgot']">Forgot your password?</a>
+
+										</form>
+									</div>
+									<div class="tab-pane fade" id="pills-profile" role="tabpanel"
+										aria-labelledby="pills-profile-tab">
+										<form class="was-validated" enctype="multipart/form-data" #registerForm="ngForm"
+											(ngSubmit)=onSubmit($event)>
+											<h1>Create Account</h1>
+											<input type="text" placeholder="FullName" class="form-control"
+												name="fullName" [(ngModel)]="model.fullName" #fullName="ngModel"
+												required>
+											<input type="text" placeholder="Email" class="form-control" name="email"
+												[(ngModel)]="model.email" #email='ngModel' required>
+											<input type="tel" placeholder="Phone Number" class="form-control"
+												name="phoneNumber" [(ngModel)]="model.phoneNumber"
+												#phoneNumber='ngModel' maxlength="10" pattern="[0-9]{10}" required>
+
+											<input type="text" placeholder="Address" class="form-control" name="address"
+												[(ngModel)]="model.address" #address='ngModel' required>
+											<input class="form-control" type="text" placeholder="Date of Birth"
+												onfocus="(this.type='date')" name="dateofBirth"
+												[(ngModel)]="model.dateofBirth" #dateofBirth='ngModel' min="1962-01-01"
+												max="2030-01-01" required>
+
+											<div class="form-group">
+												<mat-form-field appearance="fill" style="width: 100%;">
+													<mat-label>State</mat-label>
+													<mat-select name="state" [(ngModel)]="model.state" #state='ngModel'
+														required>
+														<mat-option *ngFor="let state of States"
+															(click)='getCities(state.isoCode)' [value]="state.name">
+
+															{{state.name}}
+														</mat-option>
+													</mat-select>
+												</mat-form-field>
+											</div>
+											<div class="form-group">
+												<mat-form-field appearance="fill" style="width: 100%;">
+													<mat-label>City</mat-label>
+													<mat-select name="city" [(ngModel)]="model.city" #city='ngModel'
+														required>
+														<mat-option *ngFor="let city of Cities" [value]='city.name'>
+															{{city.name}}
+														</mat-option>
+													</mat-select>
+												</mat-form-field>
+											</div>
+											<button class="bton shadow" type="submit" (click)="onSubmit('SignUp')"
+												[disabled]=!registerForm.form.valid>Sign Up</button>
+										</form>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<app-teacher-footer></app-teacher-footer>

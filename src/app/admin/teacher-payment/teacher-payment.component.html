@@ -1,0 +1,50 @@
+<!--*******************************learner details**********************************-->
+<section>
+    <div class="container">
+        <div class=" col-sm-12 col-md-12 col-xd-12 list-card">
+            <div class="card shadow ">
+                <div class="card-header">
+                    <span style="text-align: right; font-weight: bold; font-size: 20px;">Teacher's Course Payment</span>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive-xl scroll">
+                        <table class="table table-hover table-bordered">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Sno</th>
+                                    <th scope="col">Name</th>
+                                    <th scope="col">Class</th>
+                                    <th scope="col">Subject</th>
+                                    <th scope="col">TeacherFees</th>
+                                    <th scope="col">adminFees</th>
+                                    <th scope="col">adminFees</th>
+                                    <th scope="col">Button</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let model of  selectlist; let i=index">
+                                    <th scope="row">{{i+1}}</th>
+                                    <td>{{model.Name}}</td>
+                                    <td>{{model.Class}}</td>
+                                    <td>{{model.Subject}}</td>
+                                    <td>{{model.Fees}}</td>
+                                    <td>{{model.AdminFees}}</td>
+                                    <td>
+                                        <input type="number" class="form-control" name="fees" value={{model.AdminFees}}
+                                            [(ngModel)]="selectedValue[i]">
+                                        <h3 style="color: green;">{{this.message[i]}}</h3>
+                                        <h3 style="color: red;">{{this.alert[i]}}</h3>
+                                    </td>
+                                    <td>
+                                        <button class="btn btn-primary" (click)="UpdatePayment(model,i)">Update</button>
+                                    </td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

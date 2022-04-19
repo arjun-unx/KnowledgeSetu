@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,kBAAkB,AAAA,SAAS,AAAA,KAAM,CAAA,EAAE,CAAC,OAAO,CAAC;EACxC,OAAO,EAAE,aAAa;CACvB;;AAED,AAAA,YAAY,CAAC;EACX,QAAQ,EAAE,MAAM;CACjB;;AAED,AAAA,kBAAkB,CAAC;EACjB,WAAW,EAAE,MAAM;CACpB",
+    "sources": [
+        "teacher-uploads.component.scss"
+    ],
+    "names": [],
+    "file": "teacher-uploads.component.css"
+}

@@ -1,0 +1,112 @@
+<!--header section start-->
+<app-teacher-header></app-teacher-header>
+<!-- header section ends -->
+
+<!-- card section stars -->
+<section class="bg-margin">
+    <div class="container">
+        <div class="d-flex justify-content-center">
+            <div class="card shadow">
+                <div class="card-body">
+                    <div class="card-head">
+                        <h2>Your Videos</h2>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-4 col-auto mx-auto">
+                            <mat-form-field appearance="fill" style="width: 100%;" >
+                                <mat-label>Select Class</mat-label>
+                                
+                                <mat-select name="Class" [(ngModel)]="VideoForm.Class" #class='ngModel' required>
+                                    <mat-option  value="First">I</mat-option>
+                                    <mat-option  value="Second">II</mat-option>
+                                    <mat-option  value="Third">III</mat-option>
+                                    <mat-option  value="Fouth">IV</mat-option>
+                                    <mat-option  value="Fifth">V</mat-option>
+                                    <mat-option  value="Sixth">VI</mat-option>
+                                    <mat-option value="Seventh">VII</mat-option>
+                                    <mat-option  value="Eighth">VIII</mat-option>
+                                    <mat-option  value="Ninth">IX</mat-option>
+                                    <mat-option  value="Tenth">X</mat-option>
+                                    <mat-option  value="Eleventh">XI</mat-option>
+                                    <mat-option  value="Twelfth">XII</mat-option>
+                                  
+                                </mat-select>
+                                
+                            </mat-form-field>
+                        </div>
+                        <div class="col-lg-4 col-auto mx-auto">
+                            <div appearance="fill" style="width: 100%;" >
+                                
+                                <input type="text" name="Subject" class="form-control" placeholder="Subject"   [(ngModel)]="VideoForm.Subject" required> 
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-auto mx-auto">
+                            <button  class="show-bton" (click)="showVideos()" type="submit">Show
+                                Videos</button>
+                        </div>
+                        <h2>{{this.Sub}}</h2>
+                    </div>
+                    <div class="d-flex justify-content-center">
+                        <div class="row ">
+                            <div class="card video"*ngFor="let model of  FileURL; let i=index">
+                                <div class="card-body">
+                                    <video controls controlslist="nodownload" class="videoshow">
+                                        <source
+                                            src="{{this.FileURL[i]}}"
+                                            type="video/mp4">
+                                    </video>
+                                    <div class="Play-btn">
+                                        <h3>{{this.file[i].name}}</h3>
+                                    </div>
+                                    <div class=" videolabel">
+                                        <button class="btn deletebtn" (click)="videodelete(this.FileURL[i])">Delete</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body" *ngIf="FileURL.length==0">
+                                <img src='../../assets/frame_4x.webp' class="img-fluid" style="margin-top: 0px;">
+                                <h1><span style="color: red; align-items: center;">No Videos Found!!</span></h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="bg-margin">
+    <div class="container">
+        <div class="d-flex justify-content-center">
+            <div class="card shadow doc-card">
+                <div class="doc-head">
+                    <h2>Document Section</h2>
+                </div>
+                <div class="card-body doc-body">
+                    <table class="table">
+                        <thead>
+                          <tr>
+                            <th scope="col">S.no</th>
+                            <th scope="col">Document Name</th>
+                            <th scope="col">Document Delete</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr *ngFor="let model of  documenturl; let i=index">
+                            <th scope="row">{{i+1}}</th>
+                            <td>{{document[i]}}</td>
+                            <td><button  class="show-bton" type="submit" (click)="documentdelete(this.documenturl[i])">Delete</button></td>
+                          </tr>
+                          <tr *ngIf="documenturl.length==0">
+                              <td colspan="3"><span style="color: red; align-items: center;">No Document Found!!</span></td>
+                          </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- footer section start-->
+<app-teacher-footer></app-teacher-footer>
+<!-- footer section ends -->
+<!---->

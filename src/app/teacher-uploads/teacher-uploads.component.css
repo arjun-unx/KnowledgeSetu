@@ -1,0 +1,12 @@
+.custom-file-input.selected:lang(en)::after {
+  content: "" !important;
+}
+
+.custom-file {
+  overflow: hidden;
+}
+
+.custom-file-input {
+  white-space: nowrap;
+}
+/*# sourceMappingURL=teacher-uploads.component.css.map */

@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;800&display=swap');
+
+
+.bg-margin{
+    margin-top: 50px;
+}
+.head{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    color: #0795b5;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    font-size: xx-large;
+}
+.biopara{
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    padding: 15px 15px;
+}
+.subhead{
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+}
+.subpara{
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    margin-top: -10px;
+}
+.card{
+    border: none;
+	border-radius: 0%;
+}
+.header{
+    padding: 10px 10px;
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+}
+.formpoint{
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+	text-transform: uppercase;
+    color: grey;
+}
+.required::before {
+    content: "*";
+    color: red;
+    margin-right: 3px;
+}
+.label{
+    font-size: 1.2em;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 20px;
+    display: block;
+}
+.labeltext{
+    font-size: 1.5em;
+    font-family: 'Poppins', sans-serif;
+    margin-right: 10px;
+}
+.fom {
+    font-family: 'Poppins', sans-serif;
+	background-color: #FFFFFF;
+	display: flex;
+	flex-direction: column;
+	padding: 10px 50px;
+	height: 100%;
+}
+.form-select:focus{
+    outline: none;
+}
+textarea.ng-invalid, input.ng-invalid{
+    border-left: 3px solid red;
+}
+textarea.ng-valid, input.ng-valid{
+    border-left: 3px solid green;
+}
+.inp {
+	background-color: #eee;
+	border: none;
+    font-family: 'Poppins', sans-serif;
+	padding: 12px 15px;
+	margin: 8px 0px;
+	width: 100%;
+}
+.bton-group{
+    float: right;
+}
+.bton {
+    border-radius: 5px;
+	margin: 8px;
+    font-family: 'Poppins', sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 8px 15px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+    width: fit-content;
+}
+.bt-back{
+    background-color: #adb5bd;
+    color: #fff;
+}
+.bt-save{
+    background-color: #0795b5;
+	color: #FFFFFF;
+}
+.bton:focus {
+	outline: none;
+}
+/*********************************Media query************************************/
+@media (max-width: 858px){
+	
+    .head{
+        margin-top: 30px;
+        margin-bottom: 30px;
+        color: #0795b5;
+        font-weight: bold;
+        font-size: 30px;
+        letter-spacing: 1px;
+    }
+    .subhead{
+        text-align: center;
+    }
+    .subpara{
+        text-align: center;
+        margin-top: -10px;
+    }
+}
+@media (max-width: 574px){
+    .head{
+        margin-top: 30px;
+        margin-bottom: 30px;
+        color: #0795b5;
+        font-weight: bold;
+        font-size: xx-large;
+        letter-spacing: 1px;
+    }
+    .sub{
+        margin-right: 30px;
+    }
+    .sub1{
+        margin-left: 30px;
+    }
+    .subhead{
+        text-align: center;
+    }
+    .subpara{
+        text-align: center;
+        margin-top: -10px;
+    }
+    .fom {
+        background-color: #FFFFFF;
+        display: flex;
+        flex-direction: column;
+        padding: 10px 0px;
+        height: 100%;
+    }
+    .formsection{
+        margin-top: 30px;
+    }
+}

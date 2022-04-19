@@ -1,0 +1,57 @@
+@import url("https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap");
+/**********************header navbar css************************************/
+.navbar {
+  background-color: #FFFFFF;
+}
+
+.navbar-brand {
+  font-family: 'Luckiest Guy', cursive;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.navbar-brand .colortext {
+  margin-left: 8px;
+  color: #0795b5;
+  font-size: 30px;
+  font-family: 'Luckiest Guy', cursive;
+}
+
+.navbar-brand .plaintext {
+  color: #000;
+  font-size: 30px;
+  font-family: 'Luckiest Guy', cursive;
+}
+
+.navlogo {
+  height: 60px;
+}
+
+.about {
+  background-color: #0795b5;
+  border-radius: 5px;
+  border: 1px solid #0795b5;
+  color: #FFFFFF;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 12px 45px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  outline: none;
+}
+
+/********media query**************/
+@media (max-width: 450px) {
+  .navbar-brand span {
+    display: none;
+  }
+}
+
+@media (max-width: 280px) {
+  .about {
+    font-size: 12px;
+    font-weight: bold;
+    padding: 10px 25px;
+  }
+}
+/*# sourceMappingURL=header.component.css.map */

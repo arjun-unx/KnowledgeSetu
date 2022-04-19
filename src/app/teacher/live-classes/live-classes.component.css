@@ -1,0 +1,95 @@
+.bg-margin {
+  margin-top: 50px;
+}
+
+.card {
+  border: none;
+  border-radius: 0%;
+}
+
+.cord {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.head {
+  padding: 20px 30px;
+  text-transform: uppercase;
+}
+
+.required::before {
+  content: "*";
+  color: red;
+  margin-right: 3px;
+}
+
+.label {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.labeltext {
+  font-size: 1.5em;
+  margin-right: 10px;
+}
+
+.fom {
+  background-color: #FFFFFF;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 10px 50px;
+  height: 100%;
+}
+
+.form-select:focus {
+  outline: none;
+}
+
+.inp {
+  background-color: #eee;
+  border: none;
+  padding: 12px 15px;
+  margin: 8px 0;
+  width: 100%;
+}
+
+.bton {
+  border-radius: 5px;
+  background-color: #0795b5;
+  color: #FFFFFF;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 8px 15px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.bton:focus {
+  outline: none;
+}
+
+/*********************************Media query************************************/
+@media (max-width: 574px) {
+  .fom {
+    background-color: #FFFFFF;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 10px 0px;
+    height: 100%;
+  }
+}
+/*# sourceMappingURL=live-classes.component.css.map */

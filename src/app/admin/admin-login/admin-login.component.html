@@ -1,0 +1,34 @@
+<section class="bg-section">
+    <div class="img-section"></div>
+    <div class="container">
+        <div class="d-flex justify-content-center">
+            <div class="col-sm-12 col-md-6 col-xl-3">
+                <div class="loginwindow">
+                    <div class="d-flex justify-content-center">
+                        <img src="../../assets/admin-login-users.png" class="img-fluid">
+                    </div>
+                    <form #form="ngForm">
+                        <div class="mb-3">
+                            <div class="input-group shadow">
+                                <input type="email" class="form-control inp" name="email" id="admin-email" placeholder="Email" [(ngModel)]="email" required/>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <div class="input-group shadow">
+                                <div class="input-group-text">
+                                    <img src="../../assets/admin-lock.svg">
+                                </div>
+                                <input type="password" class="form-control inp" name="password" id="admin-pass" placeholder="Password" [(ngModel)]="password" required/>
+                            </div>
+                            <span style="color: red;" class="wr-text">{{alert}}</span>
+                        </div>
+                        <div class="button">
+                            <button type="submit" class="btn-secondary shadow" [routerLink]="['']">Back</button>
+                            <button type="submit" class="bton shadow" (click)="Submit()">Signin</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

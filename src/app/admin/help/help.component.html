@@ -1,0 +1,47 @@
+<!--*******************************learner details**********************************-->
+<section>
+    <div class="container">
+        <div class=" col-sm-12 col-md-12 col-xd-12 list-card">
+            <div class="card shadow ">
+                <div class="card-header">
+                    <span style="text-align: right; font-weight: bold; font-size: 20px;">Help</span>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive-xl scroll">
+                        <table class="table table-hover table-bordered">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Sno</th>
+                                    <th scope="col">Id</th>
+                                    <th scope="col">Name</th>
+                                    <th scope="col">Email</th>
+                                    <th scope="col">PhoneNumber</th>
+                                    <th scope="col">Date</th>
+                                    <th scope="col">Time</th>
+                                    <th scope="col">Query</th>
+                                    <th scope="col">Button</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let model of uploadedlist; let i=index">
+                                    <th scope="row">{{i+1}}</th>
+                                    <td>{{model.Id}}</td>
+                                    <td>{{model.fullName}}</td>
+                                    <td>{{model.email}}</td>
+                                    <td>{{model.phoneNumber}}</td>
+                                    <td>{{model.Date}}</td>
+                                    <td>{{model.Time}}</td>
+                                    <td>{{model.query}}</td>
+                                    <td>
+                                        <button class="btn btn-primary" (click)="UpdatePayment(model)">Completed</button>
+                                    </td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,132 @@
+/*import */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+/* header css start */
+.header{
+    background-color: rgba($color: #0795b5, $alpha: 0.8);
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.mobilelengthshow{
+    display: none;
+}
+.fulllengthshow{
+ display: block;
+}
+.text{
+    font-size: 40px;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 1px;
+}
+.details{
+    margin-top: 20px;
+}
+.text-para{
+    font-size: 20px;
+    font-weight: 100;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 1px;
+}
+.pay-show{
+    margin-top: 30px;
+}
+.pay-show h3{
+    display: inline;
+    color: #fff;
+    margin: 10px;
+}
+.imb{
+    color: #fff;
+}
+.btom{
+    margin-top: 30px;
+}
+.btn{
+    border-radius: 8px;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 1px;
+    font-weight: 600;
+    margin: 5px;
+}
+.back-bt{
+    background-color: white;
+    color: #000;
+}
+.btn-sub{
+    border: 2px solid #fff;
+    color: #fff;
+}
+.btn:focus{
+    outline: none;
+    text-decoration: none;
+}
+.videoshow{
+    padding-left: 20px;
+}
+.body{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.cardlecture{
+    border: none;
+    width: 18rem;
+    border-radius: 0px;
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.content{
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 20px;
+    font-weight: 300;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 1px;
+    line-height: 30px;
+}
+.card-barcode{
+    height: fit-content;
+    border: none;
+}
+/* mobile version css*/
+@media screen and (max-width:767px) {
+    .mobilelengthshow{
+        display: block;
+    }
+    .fulllengthshow{
+        display: none;
+    }
+    .cardlecture{
+        width: 30rem;
+    }
+}
+@media screen and (max-width:541px) {
+    .cardlecture{
+        width: 27rem;
+    }
+}
+@media screen and (max-width:495px) {
+    .cardlecture{
+        width: 25rem;
+    }
+}
+@media screen and (max-width:457px) {
+    .cardlecture{
+        width: 23rem;
+    }
+}
+@media screen and (max-width:422px) {
+    .cardlecture{
+        width: 20rem;
+    }
+}
+@media screen and (max-width:387px) {
+    .cardlecture{
+        width: 17rem;
+    }
+}
+@media screen and (max-width:333px) {
+    .cardlecture{
+        width: 13rem;
+    }
+}

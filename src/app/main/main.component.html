@@ -1,0 +1,108 @@
+<!--nav-section-->
+<app-student-header></app-student-header>
+<!--nav-section end-->
+<!--this is the add teacher modal html code-->
+
+<!--this section for image-->
+<div class="container">
+  <img src="../../assets/main.png" class="img-fluid">
+</div>
+<!--this is the html code for let's start learning-->
+<section class="show1 bg-margin">
+  <div class="container">
+    <h2 class="starttext"><span>Let's start</span> learning, {{name}}</h2>
+    <div class="main-carousel"
+    [flickity]="{pageDots: false,wrapAround: true, lazyLoad: true}">
+      <div class="carousel-cell" [flickityChild] *ngFor="let data of Showlist">
+    
+        <div class="card shadow cardhover1 subjectshow" [routerLink]="['/Subject/',data.Subject]">
+          <div class="card-body subjectcont">
+            <h1>{{data.Subject}}</h1>
+          </div>
+        </div>       
+      
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--**************************this is nav section for content show**************************************-->
+<section class="show1">
+  <div class="container bg-margin">
+    <h2 class="subjecttext1"></h2>
+    <h2 class="subjecttext">Class: {{model.Class}}</h2>
+    <div class="main-carousel" [flickity]="{pageDots: false, lazyLoad: true,wrapAround: true}">
+      <div  class="carousel-cell" [flickityChild] *ngFor="let data of Showlist">
+        <ng-container *ngIf="data.Class==model.Class && data.Adminpayment">
+
+        <div class="card shadow cardhover cardlecture">
+          <video style="pointer-events: none;">
+            <source src={{data.VideoURL}} type="video/mp4">
+          </video>
+          
+          <div class="card-body">
+            <h1 class="card-title">{{data.Subject}}</h1>
+            <p class="card-text"><b>Class {{data.Class}}</b></p>
+            <p class="card-text"><b>{{data.Name}}</b></p>
+            <p class="card-text">total Subscribe
+              <span class="totalprice">&#8377;{{data.AdminFees}}</span>
+            </p>
+            <button class="btn btnsub shadow" (click)="SetData(data)">Subscribe</button>
+          </div>
+        </div>
+        </ng-container>
+      </div>
+    </div> 
+  </div>
+</section>
+
+
+
+
+
+
+
+
+<!--*************************footer section************************************-->
+<app-teacher-footer></app-teacher-footer>
+<!--************************************footer End********************************-->
+
+
+
+<div class="modal fade" id="staticBackdrop1" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title" id="staticBackdropLabel" style="text-align: center;">{{onModalList.Name}}</h2>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <table>
+          <tr>
+            <td>
+         <label><b>Teacher ID: </b></label>
+         <h3>{{onModalList.id}}</h3>
+        </td>
+         <td style="text-align: center;">
+           <label><b>Class: </b></label>
+          <h3>{{onModalList.Class}}</h3>
+        </td>
+        </tr>
+        <tr>
+          <td>
+         <label><b>Subject: </b></label><h3>{{onModalList.Subject}}</h3></td>
+         <td><label><b>Fees: </b></label><h3>{{onModalList.Fees}}</h3></td>
+        </tr>
+         </table>
+         <img class="title form-control" src="{{paymentdetails.URL}}">
+         <p style="color: gray;">*Once you scan and pay the fees,please click on Pay Button</p>
+         <span style="color: green;text-align: center;">{{Message}}</span>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn bton bt-back" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn bton bt-save" (click)="request_And_Check_Payment()">Pay</button>
+      </div>
+    </div>
+  </div>
+</div>

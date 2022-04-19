@@ -1,0 +1,44 @@
+<app-student-header></app-student-header>
+
+
+<section class="search-section">
+  <div class="container">
+    <form class="d-flex">
+      <input class="form-control" type="search" placeholder="Search for content" name="search" [(ngModel)]="search">
+    </form>
+  </div>
+</section>
+
+<!-- thsi section is for the show content after search-->
+<section class="showsection">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-md-6 col-xl-3" *ngFor="let list of Showlist |filter:search">
+        <div class="d-flex justify-content-center" *ngIf="Showlist.length == 0">
+          <img src="../../assets/nodatafound.jpg" class="img-fluid">
+        </div>
+        <div class="d-flex justify-content-center" *ngIf="Showlist.length != 0">
+          <div class="card shadow cord">
+            <video>
+              <source src="{{list.VideoURL}}" class="card-img-top" type="video/mp4">
+            </video>
+            <div class="card-body">
+              <h1 class="card-title">{{list.Subject}}</h1>
+              <p class="card-text">Class: {{list.Class}} </p>
+              <p class="card-text">{{list.Name}}</p>
+              <p class="card-text">total Subscribe
+                <span class="totalprice">&#8377;{{list.AdminFees}}</span>
+              </p>
+              <button class="btn btnsub shadow" style="width: 100%;" (click)="SetData(list)">Subscribe</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+<app-teacher-footer></app-teacher-footer>

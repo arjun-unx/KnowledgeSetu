@@ -1,0 +1,138 @@
+.bg-margin {
+  margin-top: 50px;
+}
+
+.card {
+  border: none;
+  border-radius: 0%;
+  padding: 20px 20px;
+}
+
+.cord {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.label {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.labeltext {
+  font-weight: bold;
+  font-size: 1.5em;
+  margin-right: 10px;
+}
+
+.fom {
+  background-color: #FFFFFF;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0 50px;
+  height: 100%;
+}
+
+.form-select:focus {
+  outline: none;
+}
+
+.inp {
+  background-color: #eee;
+  border: none;
+  padding: 12px 15px;
+  margin: 8px 0;
+  width: 100%;
+}
+
+.bton {
+  border-radius: 5px;
+  background-color: #0795b5;
+  color: #FFFFFF;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 12px 45px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.bton:focus {
+  outline: none;
+}
+
+::-webkit-file-upload-button {
+  color: #fff;
+  background-color: #0795b5;
+  padding: 10px;
+  border: none;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  outline: none;
+}
+
+/****************************************media query*************************************/
+@media (max-width: 400px) {
+  .card {
+    width: 100%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .cord {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .label {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 20px;
+    display: block;
+    font-family: 'Roboto Condensed', sans-serif;
+  }
+  .labeltext {
+    font-weight: bold;
+    font-size: 1.5em;
+    margin-right: 10px;
+  }
+  .fom {
+    background-color: #FFFFFF;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 0 10px;
+    height: 100%;
+  }
+  .form-select {
+    outline: none;
+  }
+  .inp {
+    background-color: #eee;
+    border: none;
+    padding: 12px 15px;
+    margin: 8px 0;
+    width: 100%;
+  }
+  ::-webkit-file-upload-button {
+    color: #fff;
+    background-color: #0795b5;
+    padding: 10px;
+    border: none;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    outline: none;
+  }
+}
+/*# sourceMappingURL=upload-video.component.css.map */

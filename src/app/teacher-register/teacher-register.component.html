@@ -1,0 +1,72 @@
+<p>teacher-register works!</p>
+
+
+<!--*********************sidenav section******************************-->
+<div class="d-flex" id="wrapper">
+
+    <!-- Sidebar -->
+    <div class="border-right shadow" id="sidebar-wrapper">
+      <div class="sidebar-heading">
+        <div class="d-flex justify-content-center">
+          <h1 class="headtext"></h1>
+        </div>
+      </div>
+      <div class="list-group">
+        <hr class="mb-2">
+        <div class="d-flex justify-content-center">
+          <div class="col-sm-6 col-md-6 col-xd-6 sn-social">
+            <p class="head">Videos</p>
+            <p>130</p>
+          </div>
+          <div class="col-sm-6 col-md-6 col-xd-6 sn-social">
+            <p class="head">Follower</p>
+            <p>130</p>
+          </div>
+        </div>
+        <hr class="mb-2">
+        <a [routerLink]="['/teacherDashboard/Profile']" routerLinkActive="active" class="sidenav-link">
+          <img src="../../assets/icons8-customer-skin-type-7-48.png" class="img">Profile
+        </a>
+        <a [routerLink]="['/teacherDashboard/studentSubscribeList']" routerLinkActive="active"  class="sidenav-link">
+          <img src="../../assets/icons8-read-online-48.png" class="img">Student</a>
+        <a [routerLink]="['/teacherDashboard/ShowVideo']" routerLinkActive="active"  class="sidenav-link">
+          <img src="../../assets/icons8-facetime-48.png" class="img">Video</a>
+        <a [routerLink]="['/teacherDashboard/liveClass']" class="sidenav-link">
+          <img src="../../assets/icons8-youtube-live-48.png" class="img">Live Class</a>
+        <a  [routerLink]="['/teacherDashboard/uploadVideo']" routerLinkActive="active"  class="sidenav-link">
+          <img src="../../assets/icons8-upload-to-ftp-48.png" class="img">Upload Video</a>
+        <a  class="sidenav-link" style="cursor: pointer;">
+          <img src="../../assets/icons8-sign-out-48.png" class="img">logout</a>
+        <hr class="mb-2">
+        <div class="d-flex justify-content-center">
+          <button class="btn sidetoggle shadow" type="button" id="menu-toggle1">
+            <img src="../../assets/chevron_left-white-18dp.svg" width="30" height="30">
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- /#sidebar-wrapper -->
+    <div id="page-content-wrapper">
+      <nav class="navbar navbar-expand-lg navbar-dark shadow bg-col">
+        <div class="container">
+          <button class="btn lefttoggle" type="button" id="menu-toggle">
+            <img src="../../assets/menu_open-white-18dp.svg" width="30" height="30">
+          </button>
+          <a class="navbar-brand">KrAsh IT Services</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+            aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <img src="../../assets/menu-white-18dp.svg">
+          </button>
+          
+        </div>
+      </nav>
+      <div class="show" id="show">
+        <div class="container">
+          <section class="bg-margin">
+            <router-outlet></router-outlet>
+          </section>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!---->

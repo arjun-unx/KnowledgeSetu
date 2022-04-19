@@ -1,0 +1,111 @@
+.card {
+  border: none;
+  border-radius: 0%;
+  height: 600px;
+}
+
+.header {
+  padding: 10px 10px;
+  text-transform: uppercase;
+}
+
+.scroll {
+  height: 460px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.formpoint {
+  font-size: 12px;
+  text-transform: uppercase;
+  color: grey;
+}
+
+.label {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.labeltext {
+  font-size: 1.5em;
+  margin-right: 10px;
+}
+
+.fom {
+  background-color: #FFFFFF;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 10px 50px;
+  height: 100%;
+}
+
+.form-select:focus {
+  outline: none;
+}
+
+.inp {
+  background-color: #eee;
+  border: none;
+  padding: 12px 15px;
+  margin: 8px 0px;
+  width: 100%;
+}
+
+.btn {
+  color: #fff;
+  background-color: #239463;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 140px;
+  background-color: #239463;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 150%;
+  left: 50%;
+  margin-left: -75px;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+/*********************************Media query************************************/
+@media (max-width: 574px) {
+  .fom {
+    background-color: #FFFFFF;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 10px 0px;
+    height: 100%;
+  }
+  .formsection {
+    margin-top: 30px;
+  }
+}
+/*# sourceMappingURL=student-live-class.component.css.map */

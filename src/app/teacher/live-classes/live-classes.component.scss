@@ -1,0 +1,88 @@
+.bg-margin{
+  margin-top: 50px;
+}
+.card{
+  border: none;
+  border-radius: 0%;
+}
+.cord{
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.head{
+  padding: 20px 30px;
+  text-transform: uppercase;
+}
+.required::before {
+  content: "*";
+  color: red;
+  margin-right: 3px;
+}
+.label{
+  font-size: 1.2em;
+  margin-bottom: 20px;
+  display: block;
+}
+.labeltext{
+  font-size: 1.5em;
+  margin-right: 10px;
+}
+.fom {
+  background-color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  padding: 10px 50px;
+  height: 100%;
+}
+.form-select:focus{
+  outline: none;
+}
+input.ng-invalid{
+  border-left: 3px solid red;
+}
+input.ng-valid{
+  border-left: 3px solid green;
+}
+.inp {
+  background-color: #eee;
+  border: none;
+  padding: 12px 15px;
+  margin: 8px 0;
+  width: 100%;
+}
+.bton-group{
+  float: right;
+}
+.bton {
+  border-radius: 5px;
+  margin: 8px;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 12px 45px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  width: fit-content;
+}
+.bt-back{
+  background-color: #adb5bd;
+  color: #fff;
+}
+.bt-save{
+  background-color: #0795b5;
+  color: #FFFFFF;
+}
+.bton:focus {
+  outline: none;
+}
+/*********************************Media query************************************/
+@media (max-width: 574px){
+
+  .fom {
+      background-color: #FFFFFF;
+      display: flex;
+      flex-direction: column;
+      padding: 10px 0px;
+      height: 100%;
+  }
+  
+}

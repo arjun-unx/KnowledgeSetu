@@ -1,0 +1,91 @@
+/*import section */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+/*css start*/
+.bg-margin{
+    margin-top: 1.5em;
+}
+.card{
+    border: none;   
+}
+.main{
+    background-color: #edf6f9;
+    height: 80vh;
+}
+.card-body{
+    padding: 20px 20px;
+}
+
+.title{
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+}
+.barcode{
+    height: 300px;
+}
+.required::before {
+    content: "*";
+    color: red;
+    margin-right: 3px;
+}
+.label{
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    display: block;
+}
+.fom {
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 10px;
+    height: 100%;
+}
+.form-select:focus{
+    outline: none;
+}
+.inp {
+    background-color: #eee;
+    border: none;
+    padding: 12px 15px;
+    margin: 8px 0;
+    width: 100%;
+}
+::-webkit-file-upload-button{
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    background-color: #0795b5;
+    padding: 10px;
+    border:none;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    outline:none;
+}
+.bton-group{
+    float: right;
+}
+.bton {
+    border-radius: 5px;
+    margin: 8px;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 12px 45px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    width: fit-content;
+}
+.bt-save{
+    background-color: #0795b5;
+    color: #FFFFFF;
+}
+.bton:focus {
+    outline: none;
+}
+/*media query*/
+@media screen and(max-width:768px) {
+    .main{
+        height: fit-content;
+    }
+    .sm-margin{
+        margin-top: 20px;
+    }
+}
